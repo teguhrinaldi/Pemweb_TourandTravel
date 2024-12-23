@@ -6,6 +6,20 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+        <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+</script>
+
+<script>
+    AOS.init();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({ duration: 2000 });
+    });
+</script>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
