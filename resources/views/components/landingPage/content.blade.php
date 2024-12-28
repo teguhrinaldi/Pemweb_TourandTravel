@@ -22,7 +22,7 @@
                     <div class="number">{{ sprintf('%02d', $destination['id']) }}</div>
                     <div class="destination-info">
                         {{ $destination['location'] }}
-                        <span class="dot">•</span> Dot
+                        <span class="dot">•</span> 
                     </div>
                 </div>
             </div>
