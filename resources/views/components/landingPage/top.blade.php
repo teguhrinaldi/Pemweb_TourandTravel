@@ -18,7 +18,7 @@
 
 Whether you're interested in ancient traditions, modern technology, delicious cuisine, or natural wonders, Japan offers a harmonious blend of the old and the new, making it an enchanting destination for any traveler.
             </div>
-            <a href="/" class="back-button">Back</a>
+            <a href="/" class="back-button">Book Now </a> 
         </div>
     </div>
 </body>
