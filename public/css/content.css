@@ -1,0 +1,151 @@
+.top-destinations-container {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.top-destinations-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.top-destinations-header h2 {
+    font-size: 2rem;
+    color: #242424;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.top-destinations-header p {
+    color: #606060;
+}
+
+/* Grid untuk Konten */
+.top-destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    ); /* Sesuaikan dengan ukuran dari Special Offers */
+    gap: 1.5rem;
+}
+
+/* Card Destinasi */
+.destination-card {
+    background: #fff;
+    border-radius: 8px; /* Sama dengan Special Offers */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* Konsisten dengan card Special Offers */
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px); /* Konsisten dengan efek hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar */
+.destination-card .image-container {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.destination-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Info */
+.destination-card .overlay-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.destination-card .overlay-info h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.destination-card .overlay-info p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.destination-card:hover .overlay-info {
+    opacity: 1;
+}
+
+/* Footer */
+.destination-card .card-footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Untuk memastikan layout konsisten */
+}
+
+.destination-card .card-footer .number {
+    font-size: 1.5rem;
+    color: #242424;
+    font-weight: bold;
+}
+
+.destination-card .card-footer .destination-info {
+    font-size: 0.9rem;
+    color: #606060;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.destination-card .card-footer .destination-info .dot {
+    font-size: 0.8rem;
+    color: orange;
+    margin-left: 0.5rem;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .top-destinations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .top-destinations-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .top-destinations-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card .image-container {
+        height: 150px;
+    }
+
+    .destination-card .card-footer .number {
+        font-size: 1.2rem;
+    }
+}
