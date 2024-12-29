@@ -27,12 +27,11 @@
 
     <!-- Tambahkan JavaScript jika diperlukan -->
     <!-- Panggil Offers -->
-    <x-landingPage.offers :offerInformation="$offerInformation" />
-
+    <x-landingPage.offers :offerInformation="$offerInformation" /> 
+    
     <x-landingPage.about />
 
-    {{-- <x-landingPage.japan /> --}}
-    
+    <x-landingPage.top />
 
     <!-- Tambahkan JavaScript jika diperlukan -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
