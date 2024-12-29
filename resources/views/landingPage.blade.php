@@ -7,8 +7,10 @@
     <!-- Link ke CSS -->
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jumbotron.css') }}">
+
     <link rel="stylesheet" href="{{ asset('css/offer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 
     <!-- Tambahkan FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -23,10 +25,13 @@
     <!-- Panggil Content (untuk konten popular destination di masa depan) -->
     <x-landingPage.content :popularDestination="$popularDestination" />
 
+    <!-- Tambahkan JavaScript jika diperlukan -->
     <!-- Panggil Offers -->
     <x-landingPage.offers :offerInformation="$offerInformation" />
 
-    <x-landingPage.japan />
+    <x-landingPage.about />
+
+    {{-- <x-landingPage.japan /> --}}
     
 
     <!-- Tambahkan JavaScript jika diperlukan -->

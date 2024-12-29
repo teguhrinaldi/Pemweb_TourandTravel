@@ -3,6 +3,8 @@
         <div class="logoDiv" style="color: #f86b29; cursor: pointer;">
             <span>Pemweb C1</span>
         </div>
+        <div id="navBar" class="navBar">
+            <ul class="navList ">
         <!-- Hamburger Menu -->
         <div onclick="toggleNav()" class="toggleNavbar">
             <i class="fas fa-bars"></i>
@@ -43,6 +45,19 @@
                     </div>
                 @endif
             </ul>
+            <div onclick="removeNav()" class="closeNavbar">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </div>
+        </div>
+        <div onclick="showNav()" class="toggleNavbar">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                <path d="M3 6h18M3 12h18m-9 6h9"></path>
+            </svg>
+        </div>
+    </div>
+</section>
             <!-- Tombol Close Navbar -->
             <div onclick="toggleNav()" class="closeNavbar">
                 <i class="fas fa-times"></i>
