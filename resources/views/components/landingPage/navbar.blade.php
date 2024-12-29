@@ -5,6 +5,12 @@
         </div>
         <div id="navBar" class="navBar">
             <ul class="navList ">
+        <!-- Hamburger Menu -->
+        <div onclick="toggleNav()" class="toggleNavbar">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="navBar" class="navBar">
+            <ul class="navList">
                 <li class="navItem">
                     <span class="navLink">Home</span>
                 </li>
@@ -52,3 +58,22 @@
         </div>
     </div>
 </section>
+            <!-- Tombol Close Navbar -->
+            <div onclick="toggleNav()" class="closeNavbar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tambahkan JavaScript di bagian bawah -->
+<script>
+    function toggleNav() {
+        const navBar = document.getElementById('navBar');
+        if (navBar.style.display === 'block') {
+            navBar.style.display = 'none'; // Sembunyikan navbar
+        } else {
+            navBar.style.display = 'block'; // Tampilkan navbar
+        }
+    }
+</script>

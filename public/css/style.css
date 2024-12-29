@@ -95,3 +95,63 @@ nav ul li a:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 1024px) {
+    .offer .secContainer {
+        padding: 0 1rem;
+    }
+
+    .offer .secContainer .mainContent {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .offer .secContainer h2 {
+        font-size: 1.8rem;
+    }
+
+    .offer .secContainer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .offer .secContainer h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .offer .secContainer p {
+        text-align: center;
+    }
+
+    .offer .secContainer .mainContent {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .offer .secContainer .mainContent .singleOffer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer .secContainer h2 {
+        font-size: 1.2rem;
+    }
+
+    .offer .secContainer p {
+        font-size: 0.8rem;
+    }
+
+    .offer .secContainer .mainContent {
+        grid-template-columns: 1fr;
+    }
+
+    .offer .secContainer .mainContent .singleOffer .destImage {
+        height: 150px;
+    }
+
+    .offer .secContainer .mainContent .singleOffer .offerBody .price {
+        font-size: 1.2rem;
+    }
+}
