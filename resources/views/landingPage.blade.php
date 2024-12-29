@@ -27,11 +27,10 @@
 
     <!-- Tambahkan JavaScript jika diperlukan -->
     <!-- Panggil Offers -->
-    <x-landingPage.offers :offerInformation="$offerInformation" />
-
+    <x-landingPage.offers :offerInformation="$offerInformation" /> 
+    
     <x-landingPage.about />
 
-    {{-- <x-landingPage.japan /> --}}
     
 
     <!-- Tambahkan JavaScript jika diperlukan -->

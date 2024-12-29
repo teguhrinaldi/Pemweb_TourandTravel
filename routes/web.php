@@ -41,6 +41,23 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation'));
 })->name('landing');
 
+Route::get('/destination/{id}', function ($id) {
+    $details = [
+        'japan' => [
+            'title' => 'Japan',
+            'description' => 'Japan is a captivating destination that seamlessly blends tradition and modernity, creating a unique and unforgettable travel experience.',
+            'image' => 'japan.jpg',
+        ],
+        // Tambahkan detail destinasi lain
+    ];
+
+    if (!array_key_exists($id, $details)) {
+        abort(404);
+    }
+
+    return view('detail', ['detail' => $details[$id]]);
+});
+
 // Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
 Route::get('/dashboard', function () {
     return view('dashboard');
