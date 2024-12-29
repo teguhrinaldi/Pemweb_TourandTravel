@@ -61,7 +61,6 @@
     color: var(--whiteColor);
     font-weight: 600;
     padding-bottom: 1rem;
-    margin-left: 20rem;
 }
 .about .secContainer .videoCard .cardContent .cardText p {
     color: var(--whiteColor);
@@ -72,12 +71,10 @@
 }
 .about .secContainer .videoCard .cardVideo {
     border: 2px solid var(--whiteColor);
-    height: 20rem;
-    width: 45rem;
+    height: 200px;
+    width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    align-items: center;
-    margin-left: 65rem;
 }
 .about .secContainer .videoCard .cardVideo video {
     height: 100%;
