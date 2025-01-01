@@ -35,10 +35,40 @@ Route::get('/', function () {
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttel' => 'Shuttle'],
         ],
-        
     ];
 
-    return view('landingPage', compact('popularDestination', 'offerInformation'));
+    $blogInformation = [
+        [
+            'id' => 1,
+            'postImage' => ['assets/beachsinga.jpg'],
+            'title' => 'Beautiful East Coast Park Singapore',
+            'desc' => 'Singapore East Coast Park is a 15 kilometer stretch of beach. While enjoying the sunshine and sea breeze, relax from the hustle and bustle of the city',
+            'location' => 'japan',
+        ],
+        [
+            'id' => 2,
+            'postImage' => ['assets/fujim.jpg'],
+            'title' => 'Amazing Korea',
+            'desc' => 'Experience the unique culture of Korea.',
+            'location' => 'korea',
+        ],
+        [
+            'id' => 3,
+            'postImage' => ['assets/jabo.jpg'],
+            'title' => 'Explore Singapore',
+            'desc' => 'Uncover the beauty of Singapore.',
+            'location' => 'singapore',
+        ],
+        [
+            'id' => 4,
+            'postImage' => ['assets/langkawi.jpg'],
+            'title' => 'Explore Singapore',
+            'desc' => 'Uncover the beauty of Singapore.',
+            'location' => 'singapore',
+        ],
+    ];
+
+    return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
 Route::get('/destination/{id}', function ($id) {

@@ -8,16 +8,16 @@
     background: var(--whiteColor);
     width: 100%;
     padding: 1rem 3rem;
-    justify-content: space-between; /* Pastikan ini sudah sesuai */
+    justify-content: space-between;
     background-color: white;
     width: 100%;
-    padding: 1rem 2rem; /* Sesuaikan padding kanan-kiri */
+    padding: 1rem 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 .navBarSection .header .headerBtns {
-    margin-right: 2rem; /* Tambahkan jarak dari tepi kanan */
+    margin-right: 2rem;
 }
 
 .header {
@@ -171,7 +171,7 @@
         }
 
         .navBar {
-            display: none; /* Sembunyikan navbar secara default */
+            display: none;
             flex-direction: column;
             position: absolute;
             top: 60px;
@@ -184,7 +184,7 @@
         }
 
         .toggleNavbar {
-            display: block; /* Tampilkan hamburger menu */
+            display: block;
             cursor: pointer;
             font-size: 24px;
         }
@@ -198,7 +198,6 @@
         }
     }
 
-    /* Non-Responsif: Sembunyikan hamburger menu */
     .toggleNavbar {
         display: none;
     }

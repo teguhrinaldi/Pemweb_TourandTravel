@@ -23,10 +23,7 @@
 .top-destinations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(300px, 1fr)
-    ); /* Sesuaikan dengan ukuran dari Special Offers */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
@@ -41,16 +38,16 @@
 
 .destination-card:hover {
     transform: scale(1.05);
-    border-radius: 8px; /* Sama dengan Special Offers */
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex; /* Konsisten dengan card Special Offers */
+    display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .destination-card:hover {
-    transform: translateY(-5px); /* Konsisten dengan efek hover */
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -105,7 +102,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto; /* Untuk memastikan layout konsisten */
+    margin-top: auto;
 }
 
 .destination-card .card-footer .number {

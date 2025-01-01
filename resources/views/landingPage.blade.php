@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('css/offer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/best.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     <!-- Tambahkan FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -31,7 +33,11 @@
     
     <x-landingPage.about />
 
+    <x-landingPage.best :blogInformation="$blogInformation" />
+    <x-landingPage.footer />
     <x-landingPage.top />
+    
+
 
     <!-- Tambahkan JavaScript jika diperlukan -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
