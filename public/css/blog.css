@@ -83,6 +83,7 @@
 
 .about .secContainer .videoCard .cardVideo {
     border: 2px solid var(--whiteColor);
+
     border-radius: 10px;
     overflow: hidden;
     max-height: 250px;
