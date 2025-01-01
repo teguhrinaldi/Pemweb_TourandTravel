@@ -48,23 +48,24 @@ Route::get('/', function () {
         [
             'id' => 2,
             'postImage' => ['assets/fujim.jpg'],
-            'title' => 'Amazing Korea',
-            'desc' => 'Experience the unique culture of Korea.',
-            'location' => 'korea',
+            'title' => 'Fuji Mountain Japan',
+            'desc' => 'Standing at 3,765 meters, Mount Fuji is Japan highest mountain, and has long been an icon of the country. This almost perfectly shaped volcano is one of Japan most popular and iconic tourist spots.',
+            'location' => 'Japan',
+
         ],
         [
             'id' => 3,
             'postImage' => ['assets/jabo.jpg'],
-            'title' => 'Explore Singapore',
-            'desc' => 'Uncover the beauty of Singapore.',
-            'location' => 'singapore',
+            'title' => 'Jabo Village Thailand',
+            'desc' => 'This small town on the northern border of Thailand has a holiday surprise for you. To be precise, at Jabo Village, you will find the beauty of a holiday above the sea of clouds.',
+            'location' => 'Thailand',
         ],
         [
             'id' => 4,
             'postImage' => ['assets/langkawi.jpg'],
-            'title' => 'Explore Singapore',
-            'desc' => 'Uncover the beauty of Singapore.',
-            'location' => 'singapore',
+            'title' => 'Langkawi cable car Malaysia',
+            'desc' => 'Langkawi cable car is a natural and famous tourist attraction in Malaysia. The cable car which is at the top of the second highest mountain in Langkawi has a height of 709 meters above sea level.',
+            'location' => 'Malaysia',
         ],
     ];
 
