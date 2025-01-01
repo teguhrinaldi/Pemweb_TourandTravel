@@ -1,6 +1,6 @@
 .top-destinations-container {
     padding: 2rem 1rem;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Warna latar lebih soft */
 }
 
 .top-destinations-header {
@@ -21,33 +21,29 @@
 
 /* Grid untuk Konten */
 .top-destinations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    display: flex; /* Gunakan flexbox */
+    flex-wrap: wrap; /* Elemen bisa turun ke baris berikutnya */
+    gap: 5rem; /* Jarak horizontal dan vertikal antar elemen */
+    justify-content: center; /* Pusatkan elemen secara horizontal */
+    align-items: flex-start; /* Ratakan elemen di atas */
+    padding: 1rem; /* Tambahkan sedikit padding di sekitar grid */
+    margin: 0 auto; /* Pastikan grid terpusat */
 }
 
-/* Card Destinasi */
 .destination-card {
+    flex: 1 1 calc(20% - 1rem); /* Ukuran dinamis: 20% dari container */
+    max-width: 22rem; /* Batas maksimum lebar kartu */
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0; /* Pastikan tidak ada margin antar kartu */
+    height: 30rem; /* Biarkan kartu menyesuaikan tinggi */
 }
 
 .destination-card:hover {
     transform: scale(1.05);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.destination-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -55,7 +51,7 @@
 .destination-card .image-container {
     position: relative;
     width: 100%;
-    height: 25rem;
+    height: 18rem;
     overflow: hidden;
 }
 
@@ -65,44 +61,12 @@
     object-fit: cover;
 }
 
-/* Overlay Info */
-.destination-card .overlay-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.destination-card .overlay-info h3 {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.destination-card .overlay-info p {
-    color: #fff;
-    font-size: 0.9rem;
-}
-
-.destination-card:hover .overlay-info {
-    opacity: 1;
-}
-
 /* Footer */
 .destination-card .card-footer {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
 }
 
 .destination-card .card-footer .number {
@@ -112,7 +76,6 @@
 }
 
 .destination-card .card-footer .destination-info {
-    font-size: 1rem;
     font-size: 0.9rem;
     color: #606060;
     font-weight: bold;
@@ -141,6 +104,10 @@
     .top-destinations-header p {
         font-size: 0.9rem;
     }
+
+    .destination-card {
+        max-width: 90%; /* Perkecil lebar kartu */
+    }
 }
 
 @media (max-width: 480px) {
@@ -149,7 +116,7 @@
     }
 
     .destination-card .image-container {
-        height: 150px;
+        height: 15rem; /* Sesuaikan tinggi gambar */
     }
 
     .destination-card .card-footer .number {
