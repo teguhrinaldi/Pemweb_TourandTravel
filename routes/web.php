@@ -51,6 +51,7 @@ Route::get('/', function () {
             'title' => 'Fuji Mountain Japan',
             'desc' => 'Standing at 3,765 meters, Mount Fuji is Japan highest mountain, and has long been an icon of the country. This almost perfectly shaped volcano is one of Japan most popular and iconic tourist spots.',
             'location' => 'Japan',
+
         ],
         [
             'id' => 3,
