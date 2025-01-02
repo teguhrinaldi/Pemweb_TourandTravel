@@ -6,20 +6,15 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-        <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
-</script>
 
-<script>
-    AOS.init();
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        AOS.init({ duration: 2000 });
-    });
-</script>
+        <!-- AOS CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+        
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -27,6 +22,13 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <!-- AOS Initialization -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                AOS.init({ duration: 2000 });
+            });
+        </script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -46,5 +48,8 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <!-- AOS JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     </body>
 </html>

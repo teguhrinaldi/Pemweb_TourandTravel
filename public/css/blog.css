@@ -1,0 +1,125 @@
+.about .secContainer .title {
+    color: var(--blackColor);
+    line-height: 1.8rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about .secContainer .mainContent {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.about .secContainer .mainContent .singleItem {
+    text-align: center;
+    max-width: 300px;
+}
+
+.about .secContainer .mainContent .singleItem img {
+    background: rgba(247, 144, 54, 0.265);
+    width: 80px;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about .secContainer .mainContent .singleItem h3 {
+    font-weight: 700;
+    color: var(--blackColor);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.about .secContainer .mainContent .singleItem p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--textColor);
+    line-height: 1.5;
+}
+
+.about .secContainer .videoCard {
+    margin-top: 2rem;
+    background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.73),
+            rgba(0, 0, 0, 0.609)
+        ),
+        url(/assets/map.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about .secContainer .videoCard .cardContent {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    align-items: center;
+}
+
+.about .secContainer .videoCard .cardContent .cardText h2 {
+    color: var(--whiteColor);
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about .secContainer .videoCard .cardContent .cardText p {
+    color: var(--whiteColor);
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.about .secContainer .videoCard .cardVideo {
+    border: 2px solid var(--whiteColor);
+
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 250px;
+}
+
+.about .secContainer .videoCard .cardVideo video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 720px) {
+    .about .secContainer .mainContent {
+        gap: 2.5rem;
+    }
+
+    .about .secContainer .videoCard .cardContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .about .secContainer .videoCard .cardContent .cardText h2 {
+        font-size: 2rem;
+    }
+
+    .about .secContainer .videoCard .cardContent .cardText p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about .secContainer {
+        padding: 3rem 5rem;
+    }
+
+    .about .secContainer .mainContent {
+        padding: 3rem 0;
+    }
+}
