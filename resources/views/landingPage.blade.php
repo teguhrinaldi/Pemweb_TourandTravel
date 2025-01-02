@@ -10,9 +10,11 @@
 
     <link rel="stylesheet" href="{{ asset('css/offer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/best.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+   
 
     <!-- Tambahkan FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -30,12 +32,20 @@
     <!-- Tambahkan JavaScript jika diperlukan -->
     <!-- Panggil Offers -->
     <x-landingPage.offers :offerInformation="$offerInformation" /> 
+<<<<<<< HEAD
+    <x-landingPage.about />
+=======
     
     <x-landingPage.about />
+
+>>>>>>> e520ba3453ab82f9893f76e9403907b916103a00
+    
 
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.footer />
     <x-landingPage.top />
+    
+   
     
 
 
