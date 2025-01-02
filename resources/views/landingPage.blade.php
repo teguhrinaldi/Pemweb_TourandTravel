@@ -32,7 +32,13 @@
     <!-- Tambahkan JavaScript jika diperlukan -->
     <!-- Panggil Offers -->
     <x-landingPage.offers :offerInformation="$offerInformation" /> 
+<<<<<<< HEAD
     <x-landingPage.about />
+=======
+    
+    <x-landingPage.about />
+
+>>>>>>> e520ba3453ab82f9893f76e9403907b916103a00
     
 
     <x-landingPage.best :blogInformation="$blogInformation" />
