@@ -89,6 +89,10 @@
     margin-left: 0.5rem;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 408115faebe8455c33ce5d981e00e17e3121016b
 .secIntro .secTitle {
     text-align: center;
     font-size: 2rem;
@@ -99,6 +103,10 @@
     font-size: 1rem;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 408115faebe8455c33ce5d981e00e17e3121016b
 /* Responsif untuk layar kecil */
 @media screen and (max-width: 768px) {
     .blog .mainContainer {

@@ -19,20 +19,19 @@
     color: #606060;
 }
 
-/* Grid untuk Konten */
 .top-destinations-grid {
-    display: flex; /* Gunakan flexbox */
-    flex-wrap: wrap; /* Elemen bisa turun ke baris berikutnya */
-    gap: 5rem; /* Jarak horizontal dan vertikal antar elemen */
-    justify-content: center; /* Pusatkan elemen secara horizontal */
-    align-items: flex-start; /* Ratakan elemen di atas */
-    padding: 1rem; /* Tambahkan sedikit padding di sekitar grid */
-    margin: 0 auto; /* Pastikan grid terpusat */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 0 auto;
 }
 
 .destination-card {
-    flex: 1 1 calc(20% - 1rem); /* Ukuran dinamis: 20% dari container */
-    max-width: 22rem; /* Batas maksimum lebar kartu */
+    flex: 1 1 calc(20% - 1rem);
+    max-width: 22rem;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -40,6 +39,18 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0; /* Pastikan tidak ada margin antar kartu */
     height: 30rem; /* Biarkan kartu menyesuaikan tinggi */
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0;
+    height: 30rem;
 }
 
 .destination-card:hover {
