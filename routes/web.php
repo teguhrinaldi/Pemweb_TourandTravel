@@ -101,30 +101,26 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/specs/{location}', function ($location) {
-    $specimages = [
+    $specDetails = [
         [
             'id' => 1,
-            'img' => ['assets/housejap.jpg'],
+            'img1' => ['assets/housejap.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Japan Building',
+            'prices' => '4.500.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 2,
+            'dinner' => 1
         ]
     ];
 
     return view('components.landingPage.specs', [
         'location' => $location,
-        'specimages' => $specimages,
-    ]);
-});
-
-Route::get('/specs/{location}', function ($location) {
-    $specimages = [
-        [
-            'id' => 1,
-            'img' => ['assets/housejap.jpg'],
-        ]
-    ];
-
-    return view('components.landingPage.specs', [
-        'location' => $location,
-        'specimages' => $specimages,
+        'specDetails' => $specDetails,
     ]);
 });
 
