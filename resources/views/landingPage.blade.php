@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/offer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/best.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
@@ -34,10 +35,13 @@
     
     <x-landingPage.about />
 
+    
+
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.top />
     <x-landingPage.footer />
     
+    <x-landingPage.blog />
 
 
     <!-- Tambahkan JavaScript jika diperlukan -->

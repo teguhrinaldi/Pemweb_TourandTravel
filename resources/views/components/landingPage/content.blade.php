@@ -12,16 +12,14 @@
                 <!-- Gambar -->
                 <div class="image-container">
                     <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
-                    <div class="overlay-info">
-                        <h3>{{ $destination['title'] }}</h3>
-                        <p>{{ $destination['location'] }}</p>
-                    </div>
                 </div>
                 <!-- Footer -->
                 <div class="card-footer">
-                    <div class="number">{{ sprintf('%02d', $destination['id']) }}</div>
-                    <div class="destination-info">
-                        {{ $destination['location'] }}
+                    <div class="number-info">
+                        <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
+                        <span class="location">{{ $destination['location'] }}</span>
+                    </div>
+                    <div class="dot-info">
                         <span class="dot">•</span> Dot
                     </div>
                 </div>
@@ -29,6 +27,3 @@
         @endforeach
     </div>
 </section>
-
-<link rel="stylesheet" href="{{ asset('css/content.css') }}">
-
