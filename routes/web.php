@@ -3,12 +3,26 @@
     use App\Http\Controllers\ProfileController;
     use Illuminate\Support\Facades\Route;
 
+<<<<<<< HEAD
     Route::get('/', function () {
         $popularDestination = [
             ['id' => 1, 'image' => 'assets/japan.jpg', 'title' => 'Destination 1', 'location' => 'JAPAN'],
             ['id' => 2, 'image' => 'assets/malaysia.jpg', 'title' => 'Destination 2', 'location' => 'MALAYSIA'],
             ['id' => 3, 'image' => 'assets/korea.jpg', 'title' => 'Destination 3', 'location' => 'KOREA'],
         ];
+=======
+
+Route::view('/custom-login', 'components.login.login')->name('custom-login');
+Route::view('/custom-register', 'components.register.register')->name('custom-register');
+
+// Rute halaman utama landing
+Route::get('/', function () {
+    $popularDestination = [
+        ['id' => 1, 'image' => 'assets/japan.jpg', 'title' => 'Destination 1', 'location' => 'JAPAN'],
+        ['id' => 2, 'image' => 'assets/malaysia.jpg', 'title' => 'Destination 2', 'location' => 'MALAYSIA'],
+        ['id' => 3, 'image' => 'assets/korea.jpg', 'title' => 'Destination 3', 'location' => 'KOREA'],
+    ];
+>>>>>>> aee4e582ca4e1e71a2e4cf7964a00d324ab65ded
 
         $offerInformation = [
             [
@@ -68,6 +82,7 @@
                 'location' => 'Malaysia',
             ],
 
+<<<<<<< HEAD
 
         ];
 
@@ -85,3 +100,11 @@
 
     require __DIR__.'/auth.php';
 
+=======
+    // Mengembalikan tampilan landing page dengan data
+    return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
+})->name('landing');
+
+// Menambahkan file auth.php untuk rute autentikasi lainnya jika perlu
+require __DIR__.'/auth.php';
+>>>>>>> aee4e582ca4e1e71a2e4cf7964a00d324ab65ded

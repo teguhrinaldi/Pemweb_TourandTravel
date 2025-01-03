@@ -38,15 +38,22 @@
     
     <x-landingPage.about />
 
+<<<<<<< HEAD
 >>>>>>> e520ba3453ab82f9893f76e9403907b916103a00
+=======
+>>>>>>> aee4e582ca4e1e71a2e4cf7964a00d324ab65ded
     
 
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.footer />
     <x-landingPage.top />
+<<<<<<< HEAD
     
    
     
+=======
+    <x-landingPage.blog />
+>>>>>>> aee4e582ca4e1e71a2e4cf7964a00d324ab65ded
 
 
     <!-- Tambahkan JavaScript jika diperlukan -->

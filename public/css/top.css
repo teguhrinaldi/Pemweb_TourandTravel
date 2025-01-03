@@ -18,7 +18,11 @@
 
 .travel-content-section {
     flex: 1;
+<<<<<<< HEAD
     background-color: #F86B29D4;
+=======
+    background-color: hsl(26, 93%, 50%);
+>>>>>>> aee4e582ca4e1e71a2e4cf7964a00d324ab65ded
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -61,7 +65,10 @@
     display: flex;
     align-items: center;
     transition: background-color 0.3s;
+<<<<<<< HEAD
     
+=======
+>>>>>>> aee4e582ca4e1e71a2e4cf7964a00d324ab65ded
 }
 
 .travel-book-now-btn:hover {
