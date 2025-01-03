@@ -32,6 +32,7 @@
 .destination-card {
     flex: 1 1 calc(20% - 1rem);
     max-width: 23rem;
+    max-width: 22rem;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -39,6 +40,20 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0;
     height: 25rem;
+    margin: 0;
+    height: 30rem;
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0;
+    height: 30rem;
 }
 
 .destination-card:hover {
@@ -68,12 +83,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-.destination-card .card-footer .number-info {
-    display: flex;
-    flex-direction: column;
 }
 
 .destination-card .card-footer .number {

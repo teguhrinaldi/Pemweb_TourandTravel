@@ -120,10 +120,29 @@
     margin-left: 0.5rem;
 }
 
+<<<<<<< HEAD
 /* Responsivitas */
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr; /* Ubah menjadi 1 kolom pada layar kecil */
+=======
+
+.secIntro .secTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.secIntro p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .blog .mainContainer {
+        grid-template-columns: 1fr;
+>>>>>>> c156fbf04cd9e0c3a4dc88c363f48a4ba0930597
     }
 
     .blog-single-post {
