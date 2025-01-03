@@ -1,3 +1,5 @@
-<section>
-    <h1>test</h1>
-</section>
+@foreach($specimages as $images)
+<div>
+    <img src="{{ $images['img'][0] }}" alt="pic-title" />
+</div>
+@endforeach

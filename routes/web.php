@@ -94,6 +94,23 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/specs/{location}', function ($location) {
+    $specimages = [
+        [
+            'id' => 1,
+            'img' => ['assets/housejap.jpg'],
+        ]
+    ];
+
+    return view('components.landingPage.specs', [
+        'location' => $location,
+        'specimages' => $specimages,
+    ]);
+});
+
+
+
+
 // Group route untuk fitur profile (tetap jika digunakan)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

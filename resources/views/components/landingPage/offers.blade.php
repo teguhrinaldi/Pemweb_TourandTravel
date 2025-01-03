@@ -45,7 +45,7 @@
                             <i class="fa-solid fa-location-dot icon"></i>
                             <small>alamat, {{ $offer['location'] }}.</small>
                         </div>
-                        <button class="btn flex" onclick="window.location='{{ url('offers/' . $offer['location']) }}'">
+                        <button class="btn flex" onclick="window.location='{{ url('specs/' . $offer['location']) }}'">
                             View Details
                             <i class="fa-solid fa-arrow-right icon"></i>
                         </button>

@@ -36,7 +36,6 @@
 
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.top />
-    <x-landingPage.specs />
     <x-landingPage.footer />
     
 

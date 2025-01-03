@@ -8,7 +8,7 @@
     <!-- Konten Grid -->
     <div class="top-destinations-grid">
         @foreach ($popularDestination as $destination)
-            <div class="destination-card">
+            <div class="destination-card" data-url="{{ $destination['id'] == 'specificId' ? url('/specs') : url('destination/' . $destination['id']) }}">
                 <!-- Gambar -->
                 <div class="image-container">
                     <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
