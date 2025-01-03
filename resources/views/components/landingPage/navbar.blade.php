@@ -56,6 +56,12 @@
                 <path d="M3 6h18M3 12h18m-9 6h9"></path>
             </svg>
         </div>
+        <script>
+        function toggleNav() {
+            const navBar = document.getElementById('navBar');
+            navBar.classList.toggle('active');
+        }
+    </script>
     </div>
 </section>
             <!-- Tombol Close Navbar -->

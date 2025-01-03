@@ -3,6 +3,11 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
+Route::view('/custom-login', 'components.login.login')->name('custom-login');
+Route::view('/custom-register', 'components.register.register')->name('custom-register');
+
+// Rute halaman utama landing
 Route::get('/', function () {
     $popularDestination = [
         ['id' => 1, 'image' => 'assets/japan.jpg', 'title' => 'Destination 1', 'location' => 'JAPAN'],
@@ -68,36 +73,9 @@ Route::get('/', function () {
         ],
     ];
 
+    // Mengembalikan tampilan landing page dengan data
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-Route::get('/destination/{id}', function ($id) {
-    $details = [
-        'japan' => [
-            'title' => 'Japan',
-            'description' => 'Japan is a captivating destination that seamlessly blends tradition and modernity, creating a unique and unforgettable travel experience.',
-            'image' => 'japan.jpg',
-        ],
-    ];
-
-    if (!array_key_exists($id, $details)) {
-        abort(404);
-    }
-
-    return view('detail', ['detail' => $details[$id]]);
-});
-
-// Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-// Group route untuk fitur profile (tetap jika digunakan)
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
+// Menambahkan file auth.php untuk rute autentikasi lainnya jika perlu
 require __DIR__.'/auth.php';
-
