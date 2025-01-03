@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/best.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-   
+    <link rel="stylesheet" href="{{ asset('css/specs.css') }}">
 
     <!-- Tambahkan FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -32,28 +32,16 @@
     <!-- Tambahkan JavaScript jika diperlukan -->
     <!-- Panggil Offers -->
     <x-landingPage.offers :offerInformation="$offerInformation" /> 
-<<<<<<< HEAD
-    <x-landingPage.about />
-=======
     
     <x-landingPage.about />
 
-<<<<<<< HEAD
->>>>>>> e520ba3453ab82f9893f76e9403907b916103a00
-=======
->>>>>>> aee4e582ca4e1e71a2e4cf7964a00d324ab65ded
     
 
     <x-landingPage.best :blogInformation="$blogInformation" />
-    <x-landingPage.footer />
     <x-landingPage.top />
-<<<<<<< HEAD
+    <x-landingPage.footer />
     
-   
-    
-=======
     <x-landingPage.blog />
->>>>>>> aee4e582ca4e1e71a2e4cf7964a00d324ab65ded
 
 
     <!-- Tambahkan JavaScript jika diperlukan -->
