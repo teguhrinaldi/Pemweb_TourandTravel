@@ -8,35 +8,22 @@
     <!-- Konten Grid -->
     <div class="top-destinations-grid">
         @foreach ($popularDestination as $destination)
-        <div class="destination-card" onclick="window.location.href='#topSection'">
-            <!-- Gambar -->
-            <div class="image-container">
-                <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
-            </div>
-            <!-- Footer -->
-            <div class="card-footer">
-                <div class="number-info">
-                    <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
-                    <span class="location">{{ $destination['location'] }}</span>
+            <div class="destination-card">
+                <!-- Gambar -->
+                <div class="image-container">
+                    <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
                 </div>
-                <div class="dot-info">
-                    <span class="dot">•</span> Dot
+                <!-- Footer -->
+                <div class="card-footer">
+                    <div class="number-info">
+                        <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
+                        <span class="location">{{ $destination['location'] }}</span>
+                    </div>
+                    <div class="dot-info">
+                        <span class="dot">•</span> Dot
+                    </div>
                 </div>
             </div>
-        </div>
         @endforeach
     </div>
 </section>
-
-<script>
-    document.querySelectorAll('.destination-card').forEach(card => {
-        card.addEventListener('click', function() {
-            const target = document.querySelector('#topSection');
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-</script>
