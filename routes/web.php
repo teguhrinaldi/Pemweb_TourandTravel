@@ -78,5 +78,40 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-// Menambahkan file auth.php untuk rute autentikasi lainnya jika perlu
+
+Route::get('/top/{id}', function ($id) {
+    $details = [
+        'japan' => [
+            'title' => 'Japan',
+            'description' => 'Japan is a captivating destination that seamlessly blends tradition and modernity, creating a unique and unforgettable travel experience.',
+            'image' => 'japan.jpg',
+        ],
+    ];
+
+    if (!array_key_exists($id, $details)) {
+        abort(404);
+    }
+
+    $location = $details[$id];
+    dd($location); // Debug data sebelum dikirim ke view
+
+    return view('components.landingPage.top', ['location' => $location]);
+});
+
+
+
+
+// Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+// Group route untuk fitur profile (tetap jika digunakan)
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+
 require __DIR__.'/auth.php';
