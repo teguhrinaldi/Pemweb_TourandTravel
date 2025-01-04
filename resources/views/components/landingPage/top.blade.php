@@ -1,4 +1,4 @@
-<section class="travel-container">
+<section id="topSection" class="travel-container">
     <div class="travel-image-section">
         <img src="{{ asset('assets/japan.jpg') }}" alt="A busy street in Japan with bicycles and illuminated signs">
     </div>

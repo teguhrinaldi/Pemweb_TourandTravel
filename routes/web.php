@@ -82,14 +82,14 @@ Route::get('/top/{id}', function ($id) {
     ];
 
     if (!array_key_exists($id, $details)) {
-        abort(404);
+        abort(404); // Jika ID tidak ditemukan
     }
 
     $location = $details[$id];
-    dd($location); // Debug data sebelum dikirim ke view
 
     return view('components.landingPage.top', ['location' => $location]);
 });
+
 
 
 
