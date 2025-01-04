@@ -15,7 +15,7 @@
                 </div>
                 <!-- Footer -->
                 <div class="card-footer">
-                    <div class="number-info">
+                    <div class="text-content">
                         <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
                         <span class="location">{{ $destination['location'] }}</span>
                     </div>

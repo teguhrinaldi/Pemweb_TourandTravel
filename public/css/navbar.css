@@ -5,10 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--whiteColor);
-    width: 100%;
-    padding: 1rem 3rem;
-    justify-content: space-between;
     background-color: white;
     width: 100%;
     padding: 1rem 2rem;
@@ -36,37 +32,34 @@
 }
 
 .navBarSection .header .logoDiv {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--PrimaryColor);
+    color: #f86b29;
     cursor: pointer;
 }
 
 .navBarSection .header .navBar {
     display: flex;
-    flex: 1;
-    justify-content: center;
     align-items: center;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+    gap: 2rem;
 }
 
 .navBarSection .header .navBar .navList {
     display: flex;
-    align-items: center;
-    gap: 2rem;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: 32rem;
+    gap: 2rem;
 }
 
 .navBarSection .header .navBar .navList .navItem {
     position: relative;
+}
+
+.navBarSection .header .navBar .navList .navLink {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease;
 }
 
 .navBarSection .header .navBar .navList .navItem .navLink {
@@ -78,13 +71,12 @@
     cursor: pointer;
 }
 
-.navBarSection .header .navBar .navList .navItem .navLink:hover {
-    color: var(--PrimaryColor);
+.navBarSection .header .navBar .navList .navLink:hover {
+    color: #f86b29;
 }
 
 .navBarSection .header .headerBtns {
     display: flex;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -92,21 +84,22 @@
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
-    font-weight: 600;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #fff;
+    background: #f86b29;
+    transition: background-color 0.3s ease;
 }
 
 .navBarSection .header .headerBtns .LoginBtn {
-    border: 1px solid var(--PrimaryColor);
     background: transparent;
-    color: var(--PrimaryColor);
+    border: 1px solid #f86b29;
+    color: #f86b29;
 }
 
 .navBarSection .header .headerBtns .LoginBtn:hover {
-    background: var(--PrimaryColor);
-    color: var(--whiteColor);
+    background: #f86b29;
+    color: #fff;
 }
 
 .navBarSection .header .headerBtns .btn {
@@ -115,12 +108,22 @@
 }
 
 .navBarSection .header .headerBtns .btn:hover {
-    background: var(--HoverColor);
+    background: #d45e1f;
 }
 
 .navBarSection .header .toggleNavbar {
     display: none;
     cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Close Button */
+.navBarSection .header .closeNavbar {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    align-self: flex-end;
 }
 
 /* Responsive Styling */
@@ -130,7 +133,6 @@
     .navBarSection .header {
         padding: 1rem;
     }
-
     .navBarSection .header .navBar {
         display: none;
         flex-direction: column;
@@ -138,9 +140,9 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--whiteColor);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
         padding: 1rem;
     }
 
