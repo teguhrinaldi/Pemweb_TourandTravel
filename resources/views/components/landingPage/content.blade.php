@@ -5,9 +5,11 @@
         <p>Explore some of the most popular travel destinations around the world.</p>
     </div>
 
+
     <!-- Konten Grid -->
     <div class="top-destinations-grid">
-        @foreach ($popularDestination as $destination)
+    @foreach ($popularDestination as $destination)
+    <a href="/top/{{ $destination['id'] }}">
         <div class="destination-card">
             <!-- Gambar -->
             <div class="image-container">
@@ -24,6 +26,9 @@
                 </div>
             </div>
         </div>
-        @endforeach
-    </div>
+    </a>
+    @endforeach
+</div>
+
+   
 </section>

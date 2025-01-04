@@ -7,10 +7,9 @@
     <!-- Link ke CSS -->
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jumbotron.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('css/offer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/best.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
@@ -35,10 +34,14 @@
     
     <x-landingPage.about />
 
+
+    <x-landingPage.best :blogInformation="$blogInformation" />
+
+   
     
 
     <x-landingPage.best :blogInformation="$blogInformation" />
-    <x-landingPage.top />
+
 
     <x-landingPage.footer />
     

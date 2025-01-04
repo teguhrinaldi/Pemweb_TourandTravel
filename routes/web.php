@@ -13,6 +13,8 @@ Route::get('/', function () {
         ['id' => 1, 'image' => 'assets/japan.jpg', 'title' => 'Destination 1', 'location' => 'JAPAN'],
         ['id' => 2, 'image' => 'assets/malaysia.jpg', 'title' => 'Destination 2', 'location' => 'MALAYSIA'],
         ['id' => 3, 'image' => 'assets/korea.jpg', 'title' => 'Destination 3', 'location' => 'KOREA'],
+        ['id' => 4, 'image' => 'assets/thailand.jpg', 'title' => 'Destination 4', 'location' => 'THAILAND'],
+        ['id' => 5, 'image' => 'assets/img2.jpg', 'title' => 'Destination 5', 'location' => 'SINGAPURE'],
     ];
 
     $offerInformation = [
@@ -36,6 +38,14 @@ Route::get('/', function () {
             'id' => 3,
             'imgSrc' => ['assets/singaporerent.jpg'],
             'location' => 'Singapore',
+            'price' => 'Rp. 7.000.000',
+            'discount' => 30,
+            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
+        ],
+         [
+            'id' => 3,
+            'imgSrc' => ['assets/thailandrent.jpg'],
+            'location' => 'Thainland',
             'price' => 'Rp. 7.000.000',
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
@@ -77,27 +87,63 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-// Rute untuk halaman detail destinasi
+
 Route::get('/top/{id}', function ($id) {
-    $details = [
-        'japan' => [
-            'title' => 'Japan',
-            'description' => 'Japan is a captivating destination that seamlessly blends tradition and modernity, creating a unique and unforgettable travel experience.',
-            'image' => 'japan.jpg',
+    $destinations = [
+        [
+            'id' => 1,
+            'image' => 'assets/japan.jpg',
+            'title' => 'Tour and Travel C1',
+            'description' => '  Japan is a captivating destination that seamlessly blends tradition and modernity, creating a unique and unforgettable travel experience. From the bustling metropolises of Tokyo and Osaka to the serene landscapes of Kyoto and Hokkaido, Japan offers a diverse range of attractions for every traveler.',
+            'additional_info' => 'Whether your interested in ancient traditions, modern technology, delicious cuisine, or natural wonders, Japan offers a harmonious blend of the old and the new, making it an enchanting destination for any traveler.',
+        ],
+        [
+            'id' => 2,
+            'image' => 'assets/malaysia.jpg',
+            'title' => 'Tour and Travel C1',
+            'description' => 'Explore the rich culture of Japan.',
+            'additional_info' => 'Experience the fusion of tradition and modernity.',
+        ],
+        [
+            'id' => 3,
+            'image' => 'assets/korea.jpg',
+            'title' => 'Tour and Travel C1',
+            'description' => 'Explore the rich culture of Japan.',
+            'additional_info' => 'Experience the fusion of tradition and modernity.',
+        ],
+        [
+            'id' => 4,
+            'image' => 'assets/thailand.jpg',
+            'title' => 'Tour and Travel C1',
+            'description' => 'Explore the rich culture of Japan.',
+            'additional_info' => 'Experience the fusion of tradition and modernity.',
+        ],
+        [
+            'id' => 5,
+            'image' => 'assets/img2.jpg',
+            'title' => 'Tour and Travel C1',
+            'description' => 'Explore the rich culture of Japan.',
+            'additional_info' => 'Experience the fusion of tradition and modernity.',
         ],
     ];
 
-    if (!array_key_exists($id, $details)) {
-        abort(404);
+    // Cari destinasi berdasarkan id
+    $destination = collect($destinations)->firstWhere('id', $id);
+
+    // Jika tidak ditemukan, beri response 404
+    if (!$destination) {
+        abort(404, 'Destination not found');
     }
 
-    $location = $details[$id];
-    // Debug data sebelum dikirim ke view
-    dd($location);
+    
+    // dd($destination);
+    // Kirim data ke view
+    
+    return view('components.landingPage.top', compact('destination'));
 
-    return view('components.landingPage.top', ['location' => $location]);
 });
 
+// Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
 // Rute ke dashboard (memerlukan autentikasi)
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -109,6 +155,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 
 // Menambahkan file auth.php untuk rute autentikasi lainnya
 require __DIR__.'/auth.php';
