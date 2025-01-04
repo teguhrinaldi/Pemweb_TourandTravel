@@ -1,11 +1,9 @@
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
 }
-
 
 .travel-container {
     display: flex;
@@ -15,13 +13,11 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     flex-wrap: wrap;
-
 }
 
 .travel-image-section {
-    flex: 1;<<<<<<< indra
+    flex: 1;
     min-width: 300px;
-
 }
 
 .travel-image-section img {
@@ -124,10 +120,10 @@ body {
         padding: 0.5rem 0.75rem;
     }
 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; */
 }
 
 .travel-title {
@@ -173,5 +169,4 @@ body {
 
 .travel-book-now-btn i {
     margin-left: 10px;
-
 }

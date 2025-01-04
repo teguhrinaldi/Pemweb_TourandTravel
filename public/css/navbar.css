@@ -1,200 +1,161 @@
+/* Global Styling */
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+} */
+
+/* Header & Navbar Section */
 .navBarSection .header {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--whiteColor);
-    width: 100%;
-    padding: 1rem 3rem;
-    justify-content: space-between;
-    background-color: white;
-    width: 100%;
     padding: 1rem 2rem;
+    background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-.navBarSection .header .headerBtns {
-    margin-right: 2rem;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    position: relative;
-}
-
-.navBar {
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
-}
-
 .navBarSection .header .logoDiv {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--PrimaryColor);
+    color: #f86b29;
     cursor: pointer;
 }
 
-.navBarSection .header .navBar {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-}
-
-.navBarSection .header .navBar .navList {
+/* Navbar Menu */
+.navBar {
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+.navBar .navList {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: 32rem;
+    gap: 2rem;
 }
 
-.navBarSection .header .navBar .navList .navItem {
-    position: relative;
-}
-
-.navBarSection .header .navBar .navList .navItem .navLink {
+.navBar .navList .navLink {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-    color: var(--textColor);
+    color: #333;
     transition: color 0.3s ease;
-    cursor: pointer;
 }
 
-.navBarSection .header .navBar .navList .navItem .navLink:hover {
-    color: var(--PrimaryColor);
+.navBar .navList .navLink:hover {
+    color: #f86b29;
 }
 
-.navBarSection .header .headerBtns {
+/* Header Buttons */
+.headerBtns {
     display: flex;
-    align-items: center;
     gap: 1rem;
 }
 
-.navBarSection .header .headerBtns .btn {
+.headerBtns .btn {
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
-    font-weight: 600;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #fff;
+    background: #f86b29;
+    transition: background-color 0.3s ease;
 }
 
-.navBarSection .header .headerBtns .LoginBtn {
-    border: 1px solid var(--PrimaryColor);
+.headerBtns .btn:hover {
+    background: #d45e1f;
+}
+
+.headerBtns .LoginBtn {
     background: transparent;
-    color: var(--PrimaryColor);
+    border: 1px solid #f86b29;
+    color: #f86b29;
 }
 
-.navBarSection .header .headerBtns .LoginBtn:hover {
-    background: var(--PrimaryColor);
-    color: var(--whiteColor);
+.headerBtns .LoginBtn:hover {
+    background: #f86b29;
+    color: #fff;
 }
 
-.navBarSection .header .headerBtns .btn {
-    background: var(--PrimaryColor);
-    color: var(--whiteColor);
-}
-
-.navBarSection .header .headerBtns .btn:hover {
-    background: var(--HoverColor);
-}
-
-.navBarSection .header .toggleNavbar {
+/* Hamburger Menu (Mobile View) */
+.toggleNavbar {
     display: none;
+    font-size: 1.5rem;
     cursor: pointer;
+}
+
+/* Close Button */
+.closeNavbar {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-end;
 }
 
 /* Responsive Styling */
-
-/* Mobile Styling (Max Width 768px) */
 @media screen and (max-width: 768px) {
-    .navBarSection .header {
-        padding: 1rem;
-    }
-
-    .navBarSection .header .navBar {
+    .navBar {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--whiteColor);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
         padding: 1rem;
     }
 
-    .navBarSection .header .navBar.active {
+    .navBar.active {
         display: flex;
     }
 
-    .navBarSection .header .navBar .navList {
+    .navBar .navList {
         flex-direction: column;
         gap: 1rem;
     }
 
-    .navBarSection .header .toggleNavbar {
+    .toggleNavbar {
         display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
     }
 
-    .navBarSection .header .closeNavbar {
+    .closeNavbar {
         display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
-        margin-top: 10px;
-        align-self: flex-end;
     }
 }
 
-/* Mobile Small (Max Width 480px) */
 @media screen and (max-width: 480px) {
     .navBarSection .header {
-        padding: 0.25rem;
+        padding: 0.5rem 1rem;
     }
 
-    .navBarSection .header .navBar {
-        padding: 0.5rem;
+    .navBar .navList {
+        gap: 1rem;
     }
 
-    .navBarSection .header .navBar .navList {
-        gap: 0.25rem;
-    }
-
-    .navBarSection .header .toggleNavbar,
-    .navBarSection .header .closeNavbar {
+    .toggleNavbar,
+    .closeNavbar {
         font-size: 1.25rem;
     }
 }
 
-/* Tablet Styling (768px to 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .navBarSection .header {
         padding: 0.75rem;
     }
 
-    .navBarSection .header .navBar {
+    .navBar {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -207,17 +168,17 @@
         padding: 0;
     }
 
-    .navBarSection .header .navBar .navList {
+    .navBar .navList {
         flex-direction: row;
         gap: 1rem;
     }
 
-    .navBarSection .header .navBar .navList li a {
+    .navBar .navList li a {
         padding: 0.5rem 1rem;
     }
 
-    .navBarSection .header .toggleNavbar,
-    .navBarSection .header .closeNavbar {
+    .toggleNavbar,
+    .closeNavbar {
         display: none;
     }
 }

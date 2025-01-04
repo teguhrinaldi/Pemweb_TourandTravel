@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-
+// Rute untuk halaman login dan register kustom
 Route::view('/custom-login', 'components.login.login')->name('custom-login');
 Route::view('/custom-register', 'components.register.register')->name('custom-register');
 
@@ -22,7 +22,7 @@ Route::get('/', function () {
             'location' => 'Japan',
             'price' => 'Rp. 4.500.000',
             'discount' => 30,
-            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttel' => 'Shuttle'],
+            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
         [
             'id' => 2,
@@ -30,7 +30,7 @@ Route::get('/', function () {
             'location' => 'Korea',
             'price' => 'Rp. 6.500.000',
             'discount' => 30,
-            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttel' => 'Shuttle'],
+            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
         [
             'id' => 3,
@@ -38,7 +38,7 @@ Route::get('/', function () {
             'location' => 'Singapore',
             'price' => 'Rp. 7.000.000',
             'discount' => 30,
-            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttel' => 'Shuttle'],
+            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
     ];
 
@@ -56,7 +56,6 @@ Route::get('/', function () {
             'title' => 'Fuji Mountain Japan',
             'desc' => 'Standing at 3,765 meters, Mount Fuji is Japan highest mountain, and has long been an icon of the country. This almost perfectly shaped volcano is one of Japan most popular and iconic tourist spots.',
             'location' => 'Japan',
-
         ],
         [
             'id' => 3,
@@ -78,7 +77,7 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-
+// Rute untuk halaman detail destinasi
 Route::get('/top/{id}', function ($id) {
     $details = [
         'japan' => [
@@ -93,25 +92,23 @@ Route::get('/top/{id}', function ($id) {
     }
 
     $location = $details[$id];
-    dd($location); // Debug data sebelum dikirim ke view
+    // Debug data sebelum dikirim ke view
+    dd($location);
 
     return view('components.landingPage.top', ['location' => $location]);
 });
 
-
-
-
-// Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
+// Rute ke dashboard (memerlukan autentikasi)
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Group route untuk fitur profile (tetap jika digunakan)
+// Group route untuk fitur profil (memerlukan autentikasi)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
+// Menambahkan file auth.php untuk rute autentikasi lainnya
 require __DIR__.'/auth.php';
