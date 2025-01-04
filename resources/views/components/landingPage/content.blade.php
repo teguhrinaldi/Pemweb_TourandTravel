@@ -8,22 +8,22 @@
     <!-- Konten Grid -->
     <div class="top-destinations-grid">
         @foreach ($popularDestination as $destination)
-            <div class="destination-card">
-                <!-- Gambar -->
-                <div class="image-container">
-                    <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
+        <div class="destination-card">
+            <!-- Gambar -->
+            <div class="image-container">
+                <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
+            </div>
+            <!-- Footer -->
+            <div class="card-footer">
+                <div class="number-info">
+                    <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
+                    <span class="location">{{ $destination['location'] }}</span>
                 </div>
-                <!-- Footer -->
-                <div class="card-footer">
-                    <div class="text-content">
-                        <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
-                        <span class="location">{{ $destination['location'] }}</span>
-                    </div>
-                    <div class="dot-info">
-                        <span class="dot">•</span> Dot
-                    </div>
+                <div class="dot-info">
+                    Dot
                 </div>
             </div>
+        </div>
         @endforeach
     </div>
 </section>

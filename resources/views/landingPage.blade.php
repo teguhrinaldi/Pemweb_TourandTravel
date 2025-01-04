@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/best.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/specs.css') }}">
 
     <!-- Tambahkan FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -37,8 +38,11 @@
     
 
     <x-landingPage.best :blogInformation="$blogInformation" />
-    <x-landingPage.footer />
     <x-landingPage.top />
+
+    <x-landingPage.footer />
+    
+
     <x-landingPage.blog />
 
 

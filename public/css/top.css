@@ -1,13 +1,23 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
 .travel-container {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    flex-wrap: wrap;
 }
 
 .travel-image-section {
     flex: 1;
+    min-width: 300px;
 }
 
 .travel-image-section img {
@@ -20,10 +30,100 @@
     flex: 1;
     background-color: hsl(26, 93%, 50%);
     padding: 2rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    min-width: 300px;
+}
+
+.travel-title {
+    font-size: 2.5rem;
+    color: #ffff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.travel-subtitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #dd6b20;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.travel-description {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.travel-book-now-btn {
+    background-color: white;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.travel-book-now-btn:hover {
+    background-color: #c05621;
+}
+
+.travel-book-now-btn i {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .travel-title {
+        font-size: 2rem;
+    }
+
+    .travel-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .travel-description {
+        font-size: 0.9rem;
+    }
+
+    .travel-book-now-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .travel-title {
+        font-size: 1.5rem;
+    }
+
+    .travel-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .travel-description {
+        font-size: 0.8rem;
+    }
+
+    .travel-book-now-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; */
 }
 
 .travel-title {

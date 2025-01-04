@@ -4,18 +4,14 @@
         <div class="logoDiv" style="color: #f86b29; cursor: pointer;">
             <span>Pemweb C1</span>
         </div>
-        
+
         <!-- Hamburger Menu Icon -->
         <div onclick="toggleNav()" class="toggleNavbar">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars" id="hamburgerIcon"></i>
         </div>
-        
+
         <!-- Navbar Links -->
         <div id="navBar" class="navBar">
-            <!-- Close Button -->
-            <div onclick="toggleNav()" class="closeNavbar">
-                <i class="fas fa-times"></i>
-            </div>
             <ul class="navList">
                 <li class="navItem">
                     <a href="#" class="navLink">Home</a>
@@ -34,8 +30,8 @@
                 </li>
             </ul>
             <!-- Authentication Buttons -->
-            @if (session('login'))
-                <div class="headerBtns flex">
+            <div class="headerBtns">
+                @if (session('login'))
                     <button class="btn">{{ session('username') }}</button>
                     <button class="btn" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
@@ -43,20 +39,27 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
-                </div>
-            @else
-                <div class="headerBtns flex">
+                @else
                     <button onclick="window.location.href='{{ route('login') }}'" class="btn LoginBtn">Login</button>
                     <button onclick="window.location.href='{{ route('register') }}'" class="btn">Sign Up</button>
-                </div>
-            @endif
+                @endif
+            </div>
         </div>
     </div>
 </section>
 
+
 <script>
     function toggleNav() {
         const navBar = document.getElementById('navBar');
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
         navBar.classList.toggle('active');
+
+        // Ganti ikon hamburger menjadi close
+        if (navBar.classList.contains('active')) {
+            hamburgerIcon.classList.replace('fa-bars', 'fa-times');
+        } else {
+            hamburgerIcon.classList.replace('fa-times', 'fa-bars');
+        }
     }
 </script>
