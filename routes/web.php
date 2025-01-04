@@ -3,6 +3,11 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
+Route::view('/custom-login', 'components.login.login')->name('custom-login');
+Route::view('/custom-register', 'components.register.register')->name('custom-register');
+
+// Rute halaman utama landing
 Route::get('/', function () {
     $popularDestination = [
         ['id' => 1, 'image' => 'assets/japan.jpg', 'title' => 'Destination 1', 'location' => 'JAPAN'],
@@ -69,8 +74,10 @@ Route::get('/', function () {
         ],
     ];
 
+    // Mengembalikan tampilan landing page dengan data
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
+
 
 Route::get('/top/{id}', function ($id) {
     $details = [
@@ -105,5 +112,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 
 require __DIR__.'/auth.php';

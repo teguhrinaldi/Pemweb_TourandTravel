@@ -39,8 +39,10 @@
 
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.top />
+
     <x-landingPage.footer />
     
+
     <x-landingPage.blog />
 
 
