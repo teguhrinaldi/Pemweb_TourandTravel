@@ -157,5 +157,8 @@ Route::middleware('auth')->group(function () {
 });
 
 
+<<<<<<< HEAD
 // Menambahkan file auth.php untuk rute autentikasi lainnya
+=======
+>>>>>>> 1f93900f5d7f3b24421ecac1894c5d6aa0721926
 require __DIR__.'/auth.php';
