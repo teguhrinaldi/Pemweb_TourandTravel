@@ -34,17 +34,14 @@
     
     <x-landingPage.about />
 
-<<<<<<< HEAD
 
     <x-landingPage.best :blogInformation="$blogInformation" />
 
    
-=======
     
 
     <x-landingPage.best :blogInformation="$blogInformation" />
-    <x-landingPage.top />
->>>>>>> 1f93900f5d7f3b24421ecac1894c5d6aa0721926
+
 
     <x-landingPage.footer />
     
