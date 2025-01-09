@@ -40,13 +40,13 @@
    
     
 
-    <x-landingPage.best :blogInformation="$blogInformation" />
+    <!-- <x-landingPage.best :blogInformation="$blogInformation" /> -->
 
 
     <x-landingPage.footer />
     
 
-    <x-landingPage.blog />
+    <!-- <x-landingPage.blog /> -->
 
 
     <!-- Tambahkan JavaScript jika diperlukan -->
