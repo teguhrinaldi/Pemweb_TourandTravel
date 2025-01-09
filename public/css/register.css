@@ -1,0 +1,200 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+.bodymain {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Menambahkan background warna untuk keseluruhan halaman */
+}
+
+.login-section-signup {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url("../../assets/korea.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5rem; /* Memberikan sedikit jarak atas pada form */
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsl(26, 93%, 50%);
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px black;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem; /* Menambahkan padding kiri agar teks tidak terlalu rapat dengan ikon */
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: hsl(330, 12%, 97%);
+    font-size: 1rem;
+    color: hsl(0, 0%, 18%);
+}
+
+.input-group input:focus {
+    outline: none;
+    border: 1px solid hsl(26, 93%, 50%);
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 1.2rem;
+}
+
+/* Eye Icon untuk toggle password visibility */
+#toggle-password,
+#toggle-password-confirmation {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 1.2rem;
+}
+
+.login-or-signup {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.login-or-signup button {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-or-signup button[type="submit"] {
+    background-color: hsl(26, 93%, 50%);
+    color: white;
+}
+
+.login-or-signup button[type="submit"]:hover {
+    background-color: hsl(26, 90%, 42%);
+}
+
+.login-or-signup button[type="button"] {
+    background-color: transparent;
+    color: hsl(26, 93%, 50%);
+    border: 2px solid hsl(26, 93%, 50%);
+}
+
+.login-or-signup button[type="button"]:hover {
+    background-color: hsl(26, 93%, 50%);
+    color: white;
+}
+
+.google-signup {
+    margin-top: 1rem;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ea4335;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.google-btn:hover {
+    background-color: #c5382f;
+}
+
+.google-btn i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+p.error {
+    position: absolute;
+    white-space: nowrap;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    padding: 0.25rem 0.75rem;
+    background-color: red;
+    bottom: 2rem;
+    left: 3rem;
+}
+
+p.loading {
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    bottom: 2rem;
+    right: 3rem;
+    display: none;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 3rem;
+        max-width: 90%;
+    }
+
+    .login-or-signup {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .login-or-signup button {
+        width: 100%;
+    }
+
+    .google-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
