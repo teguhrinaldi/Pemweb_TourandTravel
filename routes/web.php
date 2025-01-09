@@ -109,13 +109,14 @@ Route::get('/specs/{location}', function ($location) {
             'img3' => ['assets/housejap3.jpg'],
             'img4' => ['assets/housejap4.jpg'],
             'name' => 'Japan Building',
-            'prices' => '4.500.000',
+            'prices' => 'Rp. 4.500.000',
             'lvroom' => 1,
             'kitchen' => 1,
             'bedroom' => 2,
             'bathroom' => 2,
             'dinner' => 1,
             'location' => 'JAPAN',
+            'discount' => '30%'
         ],
         [
             'id' => 2,
@@ -131,13 +132,12 @@ Route::get('/specs/{location}', function ($location) {
             'bathroom' => 2,
             'dinner' => 1,
             'location' => 'KOREA',
+            'discount' => '30%'
         ],
     ];
 
-    // Normalize both $location and 'location' keys to uppercase
     $location = strtoupper($location);
 
-    // Find the spec matching the location
     $filteredSpec = collect($specDetails)->firstWhere('location', $location);
 
     if (!$filteredSpec) {
