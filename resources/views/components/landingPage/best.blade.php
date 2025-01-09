@@ -19,7 +19,7 @@
                         <h3>{{ $post['title'] }}</h3>
                         <p>{{ $post['desc'] }}</p>
                     </div>
-                    <div class="readmore" onclick="location.href='{{ url('bestblog/' . $post['location']) }}'">
+                    <div class="readmore" onclick="location.href='{{ url('blog/' . $post['location']) }}'">
                         <span>Read More</span>
                         <i class="icon"></i>
                     </div>
