@@ -1,10 +1,18 @@
+<<<<<<< HEAD
+import './bootstrap';
+
+import Alpine from 'alpinejs';
+=======
 import "./bootstrap";
 
 import Alpine from "alpinejs";
+>>>>>>> c3a21b8794164a82fe0a5e73b55c782800b4f693
 
 window.Alpine = Alpine;
 
 Alpine.start();
+<<<<<<< HEAD
+=======
 
 // JavaScript untuk toggle password visibility
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,3 +28,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+>>>>>>> c3a21b8794164a82fe0a5e73b55c782800b4f693
