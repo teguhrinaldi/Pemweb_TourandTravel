@@ -5,30 +5,30 @@
         <p>Explore some of the most popular travel destinations around the world.</p>
     </div>
 
+
     <!-- Konten Grid -->
     <div class="top-destinations-grid">
-        @foreach ($popularDestination as $destination)
-            <div class="destination-card">
-                <!-- Gambar -->
-                <div class="image-container">
-                    <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
-                    <div class="overlay-info">
-                        <h3>{{ $destination['title'] }}</h3>
-                        <p>{{ $destination['location'] }}</p>
-                    </div>
+    @foreach ($popularDestination as $destination)
+    <a href="/top/{{ $destination['id'] }}">
+        <div class="destination-card">
+            <!-- Gambar -->
+            <div class="image-container">
+                <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
+            </div>
+            <!-- Footer -->
+            <div class="card-footer">
+                <div class="number-info">
+                    <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
+                    <span class="location">{{ $destination['location'] }}</span>
                 </div>
-                <!-- Footer -->
-                <div class="card-footer">
-                    <div class="number">{{ sprintf('%02d', $destination['id']) }}</div>
-                    <div class="destination-info">
-                        {{ $destination['location'] }}
-                        <span class="dot">•</span> Dot
-                    </div>
+                <div class="dot-info">
+                    Dot
                 </div>
             </div>
-        @endforeach
-    </div>
+        </div>
+    </a>
+    @endforeach
+</div>
+
+   
 </section>
-
-<link rel="stylesheet" href="{{ asset('css/content.css') }}">
-
