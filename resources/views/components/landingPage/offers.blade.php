@@ -37,7 +37,7 @@
                             </div>
                             <div class="singleAmenity flex">
                                 <i class="fa-solid fa-shuttle-van icon"></i>
-                                <small>{{ $offer['facilities']['shuttel'] }}</small>
+                                <small>{{ $offer['facilities']['shuttle'] }}</small>
                             </div>
                         </div>
 
