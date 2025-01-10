@@ -1,135 +1,113 @@
-:root {
-    --PrimaryColor: hsl(26, 93%, 50%); /* Warna oranye */
-    --HoverColor: hsl(26, 90%, 42%);
-    --whiteColor: hsl(0, 0%, 100%);
-    --blackColor: hsl(0, 0%, 18%);
-    --textColor: hsl(240, 1%, 48%);
-    --whiteColorDeam: hsl(0, 0%, 96%);
-    --greyBg: hsl(0, 0%, 96%);
-    --greyText: rgb(190, 190, 190);
-    --inputColor: hsl(330, 12%, 97%);
-    --boxShadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+.footer {
+    padding: 2.5rem 1rem;
+    background: linear-gradient(135deg, #ff6700, #ff4500, #d626ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+    font-family: "Arial", sans-serif;
 }
 
-.footer {
-    background: var(--PrimaryColor); /* Background orange */
-    padding: 4rem 2rem;
-    box-shadow: var(--boxShadow);
-    border-top: 4px solid var(--PrimaryColor);
-    margin-top: 4rem;
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .footer .secContainer {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerLogo {
     text-align: center;
 }
 
-.footer .footerLogo {
-    padding-bottom: 1rem;
+.footerLogo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
 }
 
-.footer .footerLogo .logo {
-    color: var(--blackColor); /* Teks hitam */
-    font-weight: 600;
-    cursor: pointer;
+.socials {
     display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.socials .icon {
+    font-size: 1.8rem;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socials .icon:hover {
+    transform: scale(1.2);
+    color: #ffff99;
+}
+
+.footerLinks {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footerLinks .linkTitle {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem; /* Menambahkan jarak bawah pada logo */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
 }
 
-.footer .footerLogo .logo .icon {
-    display: none; /* Hapus logo komputer */
+.footerLinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer .socials {
-    gap: 1rem;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+.footerLinks ul li {
+    margin-bottom: 0.8rem;
 }
 
-.footer .socials .icon {
-    font-size: 35px;
-    background: var(--whiteColor);
-    border-radius: 50%;
-    padding: 12px;
-    color: var(--PrimaryColor);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.footer .socials .icon:hover {
-    background: var(--HoverColor);
-    transform: scale(1.1);
-}
-
-.footer .footerLinks {
-    display: grid;
-    gap: 1rem;
-    justify-content: center;
-    text-align: left;
-}
-
-.footer .footerLinks .linkTitle {
-    color: var(--blackColor); /* Teks hitam */
-    font-weight: 700;
-    font-size: 1.2rem;
-    padding-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer .footerLinks li {
-    list-style-type: none;
-}
-
-.footer .footerLinks li {
-    margin-bottom: 0.5rem; /* Menambahkan margin antar link */
-}
-
-.footer .footerLinks li:hover {
-    transform: translateX(10px);
-}
-
-.footer .footerLinks li:hover a {
-    color: var(--PrimaryColor);
-}
-
-.footer .footerLinks a {
-    color: var(--blackColor); /* Teks hitam untuk link */
-    font-size: 16px;
-    font-weight: 500;
+.footerLinks ul li a {
     text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
-.footer .footerLinks .phone,
-.footer .footerLinks .email {
-    font-size: 16px;
-    color: var(--blackColor); /* Teks hitam */
+.footerLinks ul li a:hover {
+    color: #ffff99;
+    text-decoration: underline;
 }
 
-.footer .footerLinks .phone {
-    font-weight: 600;
+.footerLinks .phone,
+.footerLinks .email {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    opacity: 0.9;
 }
 
-@media screen and (min-width: 448px) {
-    .secContainer {
-        grid-template-columns: repeat(2, 1fr);
-        text-align: left;
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer .secContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-}
 
-@media screen and (min-width: 640px) {
-    .secContainer {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .secContainer {
-        padding: 2rem;
+    .footerLinks {
+        margin-bottom: 2rem;
     }
 }

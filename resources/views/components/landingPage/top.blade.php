@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan</title>
+    <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/top.css') }}">
 </head>
 <body>
-    <div class="detail-container">
-        <div class="detail-image">
-            <img src="{{ asset('assets/japan.jpg') }}" alt="Japan">
-        </div>
-        <div class="detail-content">
-            <div class="detail-title">Japan</div>
-            <div class="detail-description">
-            Japan is a captivating destination that seamlessly blends tradition and modernity, creating a unique and unforgettable travel experience. From the bustling metropolises of Tokyo and Osaka to the serene landscapes of Kyoto and Hokkaido, Japan offers a diverse range of attractions for every traveler.
 
-Whether you're interested in ancient traditions, modern technology, delicious cuisine, or natural wonders, Japan offers a harmonious blend of the old and the new, making it an enchanting destination for any traveler.
-            </div>
-            <a href="/" class="back-button">Book Now </a> 
+<section class="travel-container">
+    @if(isset($destination))
+        <div class="travel-image-section">
+            <img src="{{ asset($destination['image']) }}" alt="Image of {{ $destination['title'] }}">
         </div>
-    </div>
+        <div class="travel-content-section">
+            <h1 class="travel-title">Discover the World with</h1>
+            <h2 class="travel-subtitle">{{ $destination['title'] }}</h2>
+            <p class="travel-description">
+                {{ $destination['description'] }}
+            </p>
+            <p class="travel-description">
+                {{ $destination['additional_info'] }}
+            </p>
+            <button class="travel-book-now-btn">
+                Book now <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    @else
+        <p>Destination not found. Please check the URL or try again later.</p>
+    @endif
+</section>
+
 </body>
 </html>
