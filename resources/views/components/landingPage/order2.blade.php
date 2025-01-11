@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="{{ asset('css/order2.css') }}">
 <section>
 <div class="container2">
         <div class="header2">
