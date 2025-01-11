@@ -48,9 +48,9 @@
     justify-items: center; /* Pusatkan item dalam grid */
 }
 
-/* Postingan Individual */
+/* Postingan Individual
     justify-items: center;
-}
+} */
 
 .blog-single-post {
     display: flex;
@@ -68,10 +68,6 @@
 
 .blog-single-post:hover {
     transform: scale(1.03); /* Efek hover */
-}
-
-/* Gambar Postingan */
-    transform: scale(1.03);
 }
 
 .blog-img-div {
@@ -132,13 +128,12 @@
     margin-left: 0.5rem;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 /* Responsivitas */
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr; /* Ubah menjadi 1 kolom pada layar kecil */
-=======
+
 
 .secIntro .secTitle {
     text-align: center;
@@ -155,7 +150,7 @@
 @media screen and (max-width: 768px) {
     .blog .mainContainer {
         grid-template-columns: 1fr;
->>>>>>> c156fbf04cd9e0c3a4dc88c363f48a4ba0930597
+
     }
 
     .blog-single-post {
@@ -164,8 +159,9 @@
 
     .blog-img-div {
         height: 180px; /* Kurangi tinggi gambar */
-=======
-@media (max-width: 768px) {
+    
+
+    @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr;
 
@@ -206,6 +202,9 @@
                 height: 180px;
             }
         }
->>>>>>> a251b676c6c78b88aa6cb6bae736f22202f95827
+    }
+}
+    }
+}
     }
 }

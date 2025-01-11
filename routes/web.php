@@ -44,7 +44,7 @@ Route::get('/', function () {
         ],
          [
             'id' => 3,
-            'imgSrc' => ['assets/thailandrent.jpg'],
+            'imgSrc' => ['assets/thairent.jpg'],
             'location' => 'Thainland',
             'price' => 'Rp. 7.000.000',
             'discount' => 30,
