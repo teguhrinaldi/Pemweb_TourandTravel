@@ -1,26 +1,20 @@
-/* Pembungkus Utama */
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0; /* Tambahkan jarak vertikal */
-    background-color: #f9f9f9; /* Latar belakang untuk membedakan bagian ini */
     padding: 2rem 0;
     background-color: #f9f9f9;
 }
 
-/* Bagian Blog */
+/* Blog Section */
 .blog-section {
     width: 100%;
-    max-width: 1200px; /* Batasi lebar maksimum */
-    padding: 0 1.5rem; /* Tambahkan padding agar tidak mepet */
-    box-sizing: border-box; /* Pastikan padding dihitung dalam lebar */
     max-width: 1200px;
     padding: 0 1.5rem;
     box-sizing: border-box;
 }
 
-/* Header Blog */
+/* Section Header */
 .blog-sec-container {
     display: flex;
     flex-direction: column;
@@ -40,19 +34,15 @@
     margin-bottom: 2rem;
 }
 
-/* Kontainer Utama untuk Postingan */
+/* Blog Main Grid */
 .blog-main-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
-    grid-template-rows: repeat(2, auto); /* 2 baris */
-    gap: 2rem; /* Jarak antar grid item */
-    justify-items: center; /* Pusatkan item secara horizontal */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
 }
 
-/* Postingan Individual
-    justify-items: center;
-} */
-
+/* Single Blog Post */
 .blog-single-post {
     display: flex;
     flex-direction: column;
@@ -62,13 +52,12 @@
     box-shadow: 0 2px 8px rgba(178, 178, 178, 0.3);
     padding: 1.5rem;
     width: 100%;
-    max-width: 500px; /* Batasi lebar untuk setiap postingan */
     max-width: 500px;
     transition: transform 0.3s ease-in-out;
 }
 
 .blog-single-post:hover {
-    transform: scale(1.03); /* Efek hover */
+    transform: scale(1.03);
 }
 
 .blog-img-div {
@@ -90,7 +79,7 @@
     transform: scale(1.05);
 }
 
-/* Detail Postingan */
+/* Blog Details */
 .blog-post-details {
     margin-top: 1rem;
     text-align: center;
@@ -108,7 +97,7 @@
     line-height: 1.5;
 }
 
-/* Tombol Read More */
+/* Read More Button */
 .blog-read-more {
     margin-top: 1rem;
     color: hsl(26, 93%, 50%);
@@ -129,84 +118,17 @@
     margin-left: 0.5rem;
 }
 
-
-/* Responsivitas */
+/* Responsiveness */
 @media (max-width: 768px) {
     .blog-main-container {
-        grid-template-columns: 1fr; /* 1 kolom pada layar kecil */
-        grid-template-rows: auto; /* Sesuaikan tinggi */
+        grid-template-columns: 1fr;
     }
 
-
-.secIntro .secTitle {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.secIntro p {
-    text-align: center;
-    font-size: 1rem;
-}
-
-
-/* Responsif untuk layar kecil */
-@media screen and (max-width: 768px) {
-    .blog .mainContainer {
-        grid-template-columns: 1fr;
-
+    .blog-img-div {
+        height: 180px;
     }
 
     .blog-single-post {
         text-align: center;
     }
-
-    .blog-img-div {
-        height: 180px; /* Kurangi tinggi gambar */
-    }
-
-    @media (max-width: 768px) {
-    .blog-main-container {
-        grid-template-columns: 1fr;
-
-        .secIntro .secTitle {
-            text-align: center;
-            font-size: 2rem;
-        }
-
-        .secIntro p {
-            text-align: center;
-            font-size: 1rem;
-        }
-
-        @media screen and (max-width: 768px) {
-            .blog .mainContainer {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-single-post {
-                text-align: center;
-            }
-
-            .blog-img-div {
-                height: 180px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .blog .mainContainer {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-single-post {
-                text-align: center;
-            }
-
-            .blog-img-div {
-                height: 180px;
-            }
-        }
-    }
 }
-    }
-}
-    }
