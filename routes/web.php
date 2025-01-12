@@ -87,104 +87,6 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-Route::get('/destination/{id}', function ($id) {
-    $details = [
-        'japan' => [
-            'title' => 'Japan',
-            'description' => 'Japan is a captivating destination that seamlessly blends tradition and modernity, creating a unique and unforgettable travel experience.',
-            'image' => 'japan.jpg',
-        ],
-        // Tambahkan detail destinasi lain
-    ];
-
-    if (!array_key_exists($id, $details)) {
-        abort(404);
-    }
-
-    return view('detail', ['detail' => $details[$id]]);
-});
-
-// Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/specs/{location}', function ($location) {
-    $specDetails = [
-        [
-            'id' => 1,
-            'img1' => ['assets/housejap.jpg'],
-            'img2' => ['assets/housejap2.jpg'],
-            'img3' => ['assets/housejap3.jpg'],
-            'img4' => ['assets/housejap4.jpg'],
-            'name' => 'Japan Building',
-            'prices' => 'Rp. 4.500.000',
-            'lvroom' => 1,
-            'kitchen' => 1,
-            'bedroom' => 2,
-            'bathroom' => 2,
-            'dinner' => 1,
-            'location' => 'JAPAN',
-            'discount' => '30%'
-        ],
-        [
-            'id' => 2,
-            'img1' => ['assets/korearent.jpg'],
-            'img2' => ['assets/housejap2.jpg'],
-            'img3' => ['assets/housejap3.jpg'],
-            'img4' => ['assets/housejap4.jpg'],
-            'name' => 'Korea Building',
-            'prices' => '5.500.000',
-            'lvroom' => 1,
-            'kitchen' => 1,
-            'bedroom' => 3,
-            'bathroom' => 2,
-            'dinner' => 1,
-            'location' => 'KOREA',
-            'discount' => '30%'
-        ],
-        [
-            'id' => 3,
-            'img1' => ['assets/korearent.jpg'],
-            'img2' => ['assets/housejap2.jpg'],
-            'img3' => ['assets/housejap3.jpg'],
-            'img4' => ['assets/housejap4.jpg'],
-            'name' => 'Korea Building',
-            'prices' => '5.500.000',
-            'lvroom' => 1,
-            'kitchen' => 1,
-            'bedroom' => 3,
-            'bathroom' => 2,
-            'dinner' => 1,
-            'location' => 'KOREA',
-            'discount' => '30%'
-        ],
-    ];
-
-    $location = strtoupper($location);
-
-    $filteredSpec = collect($specDetails)->firstWhere('location', $location);
-
-    if (!$filteredSpec) {
-        abort(404, 'Specifications not found for the requested location.');
-    }
-
-    return view('components.landingPage.specs', [
-        'specDetails' => $filteredSpec,
-    ]);
-});
-
-
-
-
-
-// Group route untuk fitur profile (tetap jika digunakan)
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
 
 Route::get('/top/{id}', function ($id) {
     $destinations = [
@@ -239,6 +141,86 @@ Route::get('/top/{id}', function ($id) {
     
     return view('components.landingPage.top', compact('destination'));
 
+});
+Route::get('/specs/{location}', function ($location) {
+    $specDetails = [
+        [
+            'id' => 1,
+            'img1' => ['assets/housejap.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Japan Building',
+            'prices' => 'Rp. 4.500.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 2,
+            'dinner' => 1,
+            'location' => 'JAPAN',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 2,
+            'img1' => ['assets/korearent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Korea Building',
+            'prices' => 'Rp. 5.500.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'KOREA',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 3,
+            'img1' => ['assets/singaporerent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Singapore Building',
+            'prices' => 'Rp. 7.000.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'SINGAPORE',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 4,
+            'img1' => ['assets/thairent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Singapore Building',
+            'prices' => 'Rp. 4.000.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'THAILAND',
+            'discount' => '30%'
+        ],
+    ];
+
+    $location = strtoupper($location);
+
+    $filteredSpec = collect($specDetails)->firstWhere('location', $location);
+
+    if (!$filteredSpec) {
+        abort(404, 'Specifications not found for the requested location.');
+    }
+
+    return view('components.landingPage.specs', [
+        'specDetails' => $filteredSpec,
+    ]);
 });
 
 // Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
