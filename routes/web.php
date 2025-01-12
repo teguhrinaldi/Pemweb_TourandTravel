@@ -143,6 +143,22 @@ Route::get('/specs/{location}', function ($location) {
             'location' => 'KOREA',
             'discount' => '30%'
         ],
+        [
+            'id' => 3,
+            'img1' => ['assets/korearent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Korea Building',
+            'prices' => '5.500.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 3,
+            'bathroom' => 2,
+            'dinner' => 1,
+            'location' => 'KOREA',
+            'discount' => '30%'
+        ],
     ];
 
     $location = strtoupper($location);

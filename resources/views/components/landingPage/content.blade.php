@@ -1,39 +1,18 @@
-<section class="top-destinations-container">
-    <!-- Header -->
-    <div class="top-destinations-header">
-        <h2>Top Destinations</h2>
-        <p>Explore some of the most popular travel destinations around the world.</p>
-    </div>
-
-
-    <!-- Konten Grid -->
-    <div class="top-destinations-grid">
+<section>
+    <h2>Popular Destinations</h2>
+    <div class="destination-grid">
         @foreach ($popularDestination as $destination)
-            <div class="destination-card" data-url="{{ $destination['id'] == 'specificId' ? url('/specs') : url('destination/' . $destination['id']) }}">
-                <!-- Gambar -->
+            <div class="destination-card">
                 <div class="image-container">
                     <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
-    @foreach ($popularDestination as $destination)
-    <a href="/top/{{ $destination['id'] }}">
-        <div class="destination-card">
-            <!-- Gambar -->
-            <div class="image-container">
-                <img src="{{ asset($destination['image']) }}" alt="{{ $destination['title'] }}">
-            </div>
-            <!-- Footer -->
-            <div class="card-footer">
-                <div class="number-info">
-                    <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
-                    <span class="location">{{ $destination['location'] }}</span>
                 </div>
-                <div class="dot-info">
-                    Dot
+                <div class="card-footer">
+                    <div class="number-info">
+                        <span class="number">{{ sprintf('%02d', $destination['id']) }}</span>
+                        <span class="location">{{ $destination['location'] }}</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </a>
-    @endforeach
-</div>
-
-   
+        @endforeach
+    </div>
 </section>
