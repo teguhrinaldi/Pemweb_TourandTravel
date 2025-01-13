@@ -42,14 +42,6 @@ Route::get('/', function () {
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
-         [
-            'id' => 3,
-            'imgSrc' => ['assets/thailandrent.jpg'],
-            'location' => 'Thainland',
-            'price' => 'Rp. 7.000.000',
-            'discount' => 30,
-            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
-        ],
     ];
 
     $blogInformation = [
@@ -87,7 +79,7 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-
+// Rute untuk halaman detail destinasi
 Route::get('/top/{id}', function ($id) {
     $destinations = [
         [
@@ -142,14 +134,91 @@ Route::get('/top/{id}', function ($id) {
     return view('components.landingPage.top', compact('destination'));
 
 });
+Route::get('/specs/{location}', function ($location) {
+    $specDetails = [
+        [
+            'id' => 1,
+            'img1' => ['assets/housejap.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Japan Building',
+            'prices' => 'Rp. 4.500.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 2,
+            'dinner' => 1,
+            'location' => 'JAPAN',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 2,
+            'img1' => ['assets/korearent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Korea Building',
+            'prices' => 'Rp. 5.500.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'KOREA',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 3,
+            'img1' => ['assets/singaporerent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Singapore Building',
+            'prices' => 'Rp. 7.000.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'SINGAPORE',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 4,
+            'img1' => ['assets/thairent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Singapore Building',
+            'prices' => 'Rp. 4.000.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'THAILAND',
+            'discount' => '30%'
+        ],
+    ];
 
-// Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
-// Rute ke dashboard (memerlukan autentikasi)
+    $location = strtoupper($location);
+
+    $filteredSpec = collect($specDetails)->firstWhere('location', $location);
+
+    if (!$filteredSpec) {
+        abort(404, 'Specifications not found for the requested location.');
+    }
+
+    return view('components.landingPage.specs', [
+        'specDetails' => $filteredSpec,
+    ]);
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Group route untuk fitur profil (memerlukan autentikasi)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
