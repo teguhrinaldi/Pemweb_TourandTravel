@@ -42,14 +42,6 @@ Route::get('/', function () {
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
-         [
-            'id' => 3,
-            'imgSrc' => ['assets/thailandrent.jpg'],
-            'location' => 'Thainland',
-            'price' => 'Rp. 7.000.000',
-            'discount' => 30,
-            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
-        ],
     ];
 
     $blogInformation = [
@@ -87,7 +79,7 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-
+// Rute untuk halaman detail destinasi
 Route::get('/top/{id}', function ($id) {
     $destinations = [
         [
@@ -229,13 +221,10 @@ Route::get('/order/{location}', function ($location) {
 })->name('order');
 
 
-// Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
-// Rute ke dashboard (memerlukan autentikasi)
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Group route untuk fitur profil (memerlukan autentikasi)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
