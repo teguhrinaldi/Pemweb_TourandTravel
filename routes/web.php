@@ -44,7 +44,7 @@ Route::get('/', function () {
         ],
          [
             'id' => 3,
-            'imgSrc' => ['assets/thairent.jpg'],
+            'imgSrc' => ['assets/thailandrent.jpg'],
             'location' => 'Thainland',
             'price' => 'Rp. 7.000.000',
             'discount' => 30,
@@ -141,6 +141,86 @@ Route::get('/top/{id}', function ($id) {
     
     return view('components.landingPage.top', compact('destination'));
 
+});
+Route::get('/specs/{location}', function ($location) {
+    $specDetails = [
+        [
+            'id' => 1,
+            'img1' => ['assets/housejap.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Japan Building',
+            'prices' => 'Rp. 4.500.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 2,
+            'dinner' => 1,
+            'location' => 'JAPAN',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 2,
+            'img1' => ['assets/korearent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Korea Building',
+            'prices' => 'Rp. 5.500.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'KOREA',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 3,
+            'img1' => ['assets/singaporerent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Singapore Building',
+            'prices' => 'Rp. 7.000.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'SINGAPORE',
+            'discount' => '30%'
+        ],
+        [
+            'id' => 4,
+            'img1' => ['assets/thairent.jpg'],
+            'img2' => ['assets/housejap2.jpg'],
+            'img3' => ['assets/housejap3.jpg'],
+            'img4' => ['assets/housejap4.jpg'],
+            'name' => 'Singapore Building',
+            'prices' => 'Rp. 4.000.000',
+            'lvroom' => 1,
+            'kitchen' => 1,
+            'bedroom' => 2,
+            'bathroom' => 1,
+            'dinner' => 1,
+            'location' => 'THAILAND',
+            'discount' => '30%'
+        ],
+    ];
+
+    $location = strtoupper($location);
+
+    $filteredSpec = collect($specDetails)->firstWhere('location', $location);
+
+    if (!$filteredSpec) {
+        abort(404, 'Specifications not found for the requested location.');
+    }
+
+    return view('components.landingPage.specs', [
+        'specDetails' => $filteredSpec,
+    ]);
 });
 
 Route::get('/dashboard', function () {
