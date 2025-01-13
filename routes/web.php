@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Route;
 Route::view('/custom-login', 'components.login.login')->name('custom-login');
 Route::view('/custom-register', 'components.register.register')->name('custom-register');
 
-
 // Rute halaman utama landing
 Route::get('/', function () {
     $popularDestination = [
@@ -143,7 +142,6 @@ Route::get('/top/{id}', function ($id) {
     return view('components.landingPage.top', compact('destination'));
 
 });
-    
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -152,12 +150,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');  
-    
-    // ...existing code...
-
-
-// ...existing code...
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';
