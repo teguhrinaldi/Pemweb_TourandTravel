@@ -79,7 +79,7 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-
+// Rute untuk halaman detail destinasi
 Route::get('/top/{id}', function ($id) {
     $destinations = [
         [
