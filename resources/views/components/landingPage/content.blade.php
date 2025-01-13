@@ -29,6 +29,4 @@
     </a>
     @endforeach
 </div>
-
-   
 </section>
