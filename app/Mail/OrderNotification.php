@@ -16,30 +16,38 @@ class OrderNotification extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $details;
+
+    public function __construct($details)
     {
-        //
+        $this->details = $details;
+    }
+
+    public function build()
+    {
+        return $this->subject('Order Notification')
+                    ->view('emails.orderNotification');
     }
 
     /**
      * Get the message envelope.
      */
-    public function envelope(): Envelope
-    {
-        return new Envelope(
-            subject: 'Order Notification',
-        );
-    }
+    // public function envelope(): Envelope
+    // {
+    //     return new Envelope(
+    //         subject: 'Order Notification',
+    //     );
+    // }
 
     /**
      * Get the message content definition.
      */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'view.name',
-        );
-    }
+    // public function content(): Content
+    // {
+    //     return new Content(
+    //         view: 'view.name',
+    //     );
+    // }
 
     /**
      * Get the attachments for the message.

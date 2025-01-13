@@ -1,0 +1,148 @@
+.invoice-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.invoice-header {
+    background-color: #f7f9fc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #e3e6eb;
+}
+
+.invoice-header h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.invoice-header .invoice-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #7f8c8d;
+    text-align: right;
+}
+
+.invoice-body {
+    padding: 20px;
+}
+
+.invoice-body h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #34495e;
+    margin: 10px 0;
+}
+
+.invoice-body p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 15px;
+}
+
+.invoice-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.invoice-body table th,
+.invoice-body table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #e5e8ec;
+    font-size: 14px;
+    color: #555;
+}
+
+.invoice-body table th {
+    background-color: #f9fafc;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.invoice-footer {
+    padding: 20px;
+    background-color: #f9fafc;
+    border-top: 1px solid #e3e6eb;
+}
+
+.invoice-footer .total {
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.invoice-footer .total span {
+    background-color: #eaf0f6;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.invoice-footer .details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.invoice-footer .details div {
+    flex: 1;
+}
+
+.invoice-footer .details div h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.invoice-footer .details div p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.invoice-footer .details div a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.invoice-footer .details div a:hover {
+    text-decoration: underline;
+}
+
+.home-button {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #ff6f61;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color: #e64e3d;
+}
