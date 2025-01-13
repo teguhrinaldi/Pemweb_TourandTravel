@@ -114,71 +114,45 @@
     margin-left: 0.5rem;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* Responsivitas */
->>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr;
+    }
+    .secIntro .secTitle {
+        text-align: center;
+        font-size: 2rem;
+    }
 
-        .secIntro .secTitle {
+    .secIntro p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .blog .mainContainer {
+            grid-template-columns: 1fr;
+        }
+
+        .blog-single-post {
             text-align: center;
-            font-size: 2rem;
         }
 
-<<<<<<< HEAD
-=======
-    .blog-img-div {
-        height: 180px; /* Kurangi tinggi gambar */
-=======
-@media (max-width: 768px) {
-    .blog-main-container {
-        grid-template-columns: 1fr;
+        .blog-img-div {
+            height: 180px;
+        }
+    }
 
-        .secIntro .secTitle {
+    @media screen and (max-width: 768px) {
+        .blog .mainContainer {
+            grid-template-columns: 1fr;
+        }
+
+        .blog-single-post {
             text-align: center;
-            font-size: 2rem;
         }
 
->>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
-        .secIntro p {
-            text-align: center;
-            font-size: 1rem;
+        .blog-img-div {
+            height: 180px;
         }
-
-        @media screen and (max-width: 768px) {
-            .blog .mainContainer {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-single-post {
-                text-align: center;
-            }
-
-            .blog-img-div {
-                height: 180px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .blog .mainContainer {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-single-post {
-                text-align: center;
-            }
-
-            .blog-img-div {
-                height: 180px;
-            }
-        }
-<<<<<<< HEAD
-=======
->>>>>>> a251b676c6c78b88aa6cb6bae736f22202f95827
->>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
     }
 }
