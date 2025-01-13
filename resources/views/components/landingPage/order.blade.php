@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/order.css') }}">
 <section>
-<div class="container">
+<div class="container1">
         <div class="header">
             <h1>Order Form</h1>
         </div>  

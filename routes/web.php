@@ -42,14 +42,6 @@ Route::get('/', function () {
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
-         [
-            'id' => 3,
-            'imgSrc' => ['assets/thailandrent.jpg'],
-            'location' => 'Thainland',
-            'price' => 'Rp. 7.000.000',
-            'discount' => 30,
-            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
-        ],
     ];
 
     $blogInformation = [
@@ -87,7 +79,7 @@ Route::get('/', function () {
     return view('landingPage', compact('popularDestination', 'offerInformation', 'blogInformation'));
 })->name('landing');
 
-
+// Rute untuk halaman detail destinasi
 Route::get('/top/{id}', function ($id) {
     $destinations = [
         [
@@ -233,4 +225,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+// Menambahkan file auth.php untuk rute autentikasi lainnya
 require __DIR__.'/auth.php';
