@@ -7,45 +7,24 @@
     <!-- Link ke CSS -->
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jumbotron.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('css/offer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/best.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/specs.css') }}">
 
     <!-- Tambahkan FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Panggil Navbar -->
     <x-landingPage.navbar />
-
-    <!-- Panggil Jumbotron -->
-    <x-landingPage.jumbotron />
-
-    <!-- Panggil Content (untuk konten popular destination di masa depan) -->
-    <x-landingPage.content :popularDestination="$popularDestination" />
-
-    <!-- Tambahkan JavaScript jika diperlukan -->
-    <!-- Panggil Offers -->
-    <x-landingPage.offers :offerInformation="$offerInformation" /> 
-    
+    <x-landingPage.jumbotron />   
+    <x-landingPage.content :popularDestination="$popularDestination" />   
+    <x-landingPage.offers :offerInformation="$offerInformation" />  
     <x-landingPage.about />
-
-    
-
     <x-landingPage.best :blogInformation="$blogInformation" />
-    <x-landingPage.top />
-
     <x-landingPage.footer />
-    
-
-    <x-landingPage.blog />
-
-
     <!-- Tambahkan JavaScript jika diperlukan -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>

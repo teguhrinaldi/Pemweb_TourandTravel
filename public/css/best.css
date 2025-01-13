@@ -2,6 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
+=======
+    padding: 2rem 0; /* Tambahkan jarak vertikal */
+    background-color: #f9f9f9; /* Latar belakang untuk membedakan bagian ini */
+>>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
     padding: 2rem 0;
     background-color: #f9f9f9;
 }
@@ -9,6 +14,12 @@
 /* Bagian Blog */
 .blog-section {
     width: 100%;
+<<<<<<< HEAD
+=======
+    max-width: 1200px; /* Batasi lebar maksimum */
+    padding: 0 1.5rem; /* Tambahkan padding agar tidak mepet */
+    box-sizing: border-box; /* Pastikan padding dihitung dalam lebar */
+>>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
     max-width: 1200px;
     padding: 0 1.5rem;
     box-sizing: border-box;
@@ -41,6 +52,13 @@
     justify-items: center;
 }
 
+<<<<<<< HEAD
+=======
+/* Postingan Individual */
+    justify-items: center;
+}
+
+>>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
 .blog-single-post {
     display: flex;
     flex-direction: column;
@@ -50,6 +68,10 @@
     box-shadow: 0 2px 8px rgba(178, 178, 178, 0.3);
     padding: 1.5rem;
     width: 100%;
+<<<<<<< HEAD
+=======
+    max-width: 500px; /* Batasi lebar untuk setiap postingan */
+>>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
     max-width: 500px;
     transition: transform 0.3s ease-in-out;
 }
@@ -58,6 +80,13 @@
     transform: scale(1.03);
 }
 
+<<<<<<< HEAD
+=======
+/* Gambar Postingan */
+    transform: scale(1.03);
+}
+
+>>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
 .blog-img-div {
     width: 100%;
     height: 200px;
@@ -114,6 +143,12 @@
     margin-left: 0.5rem;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+/* Responsivitas */
+>>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr;
@@ -123,6 +158,21 @@
             font-size: 2rem;
         }
 
+<<<<<<< HEAD
+=======
+    .blog-img-div {
+        height: 180px; /* Kurangi tinggi gambar */
+=======
+@media (max-width: 768px) {
+    .blog-main-container {
+        grid-template-columns: 1fr;
+
+        .secIntro .secTitle {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+>>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
         .secIntro p {
             text-align: center;
             font-size: 1rem;
@@ -155,5 +205,9 @@
                 height: 180px;
             }
         }
+<<<<<<< HEAD
+=======
+>>>>>>> a251b676c6c78b88aa6cb6bae736f22202f95827
+>>>>>>> e225e596b5dca421fe79470277eec32be69cbf3e
     }
 }
