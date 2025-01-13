@@ -220,8 +220,14 @@ Route::get('/specs/{location}', function ($location) {
 
     return view('components.landingPage.specs', [
         'specDetails' => $filteredSpec,
+        'location' => $location,
     ]);
-});
+})->name('specs');
+
+Route::get('/order/{location}', function ($location) {
+    return view('components.landingPage.order', ['location' => $location]);
+})->name('order');
+
 
 // Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
 // Rute ke dashboard (memerlukan autentikasi)

@@ -63,7 +63,7 @@
                 </div>
                 <div>
                     <div class="btn-order">
-                        <button class="btn" onclick="window.location='{{ url('') }}'">Order</button>
+                        <button class="btn" onclick="window.location='{{ route('order', ['location' => $location]) }}'">Order</button>
                     </div>
                 </div>
             </div>
