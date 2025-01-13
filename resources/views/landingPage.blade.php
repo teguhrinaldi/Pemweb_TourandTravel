@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('css/best.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/order.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/order2.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/order3.css') }}">
    
     <link rel="stylesheet" href="{{ asset('css/specs.css') }}">
 
@@ -39,8 +41,6 @@
 
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.footer />
-    <x-landingPage.top />
-    <x-landingPage.order />
 
    
     

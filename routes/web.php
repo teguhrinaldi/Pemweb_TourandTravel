@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/custom-login', 'components.login.login')->name('custom-login');
 Route::view('/custom-register', 'components.register.register')->name('custom-register');
 
+
 // Rute halaman utama landing
 Route::get('/', function () {
     $popularDestination = [
@@ -44,7 +45,7 @@ Route::get('/', function () {
         ],
          [
             'id' => 3,
-            'imgSrc' => ['assets/thailandrent.jpg'],
+            'imgSrc' => ['assets/thairent.jpg'],
             'location' => 'Thainland',
             'price' => 'Rp. 7.000.000',
             'discount' => 30,
@@ -142,20 +143,21 @@ Route::get('/top/{id}', function ($id) {
     return view('components.landingPage.top', compact('destination'));
 
 });
+    
 
-// Route ke Dashboard (tetap ada jika menggunakan auth Laravel Breeze)
-// Rute ke dashboard (memerlukan autentikasi)
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Group route untuk fitur profil (memerlukan autentikasi)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');  
+    
+    // ...existing code...
+
+
+// ...existing code...
 });
 
-
-// Menambahkan file auth.php untuk rute autentikasi lainnya
 require __DIR__.'/auth.php';

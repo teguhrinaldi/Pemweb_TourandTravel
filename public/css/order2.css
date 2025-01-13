@@ -1,19 +1,22 @@
 .container2 {
+  text-align: center;
   width: 100%;
   max-width: 600px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-sizing: border-box;
+  place-self: center;
 }
 .header2 {
-  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 .header2 h1 {
+  text-align: center;
+  margin: 0;
   font-size: 24px;
-  color: #3d3d3d;
+  color: #1a1a1a;
 }
 .form-section2 {
   background-color: #f9f9f9;

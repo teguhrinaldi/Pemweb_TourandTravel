@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ asset('css/order.css') }}">
 <section>
 <div class="container">
         <div class="header">
