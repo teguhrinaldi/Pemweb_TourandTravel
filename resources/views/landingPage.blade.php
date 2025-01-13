@@ -24,27 +24,8 @@
     <x-landingPage.content :popularDestination="$popularDestination" />   
     <x-landingPage.offers :offerInformation="$offerInformation" />  
     <x-landingPage.about />
-<<<<<<< HEAD
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.footer />
-=======
-
-
-    <x-landingPage.best :blogInformation="$blogInformation" />
-
-   
-    
-
-    <x-landingPage.best :blogInformation="$blogInformation" />
-
-
-    <x-landingPage.footer />
-    
-
-    <x-landingPage.blog />
-
-
->>>>>>> 8e7419126f3838b7cb0adfde5519f247e64c8148
     <!-- Tambahkan JavaScript jika diperlukan -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
