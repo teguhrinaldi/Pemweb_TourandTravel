@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 
 // Rute untuk halaman login dan register kustom
 Route::view('/custom-login', 'components.login.login')->name('custom-login');
@@ -225,9 +226,35 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/blog/japan', function () {
-    return view('components/landingPage.blog');
+Route::get('/order1', function () {
+    return view('components.landingPage.order');
 });
+Route::get('/order2', function () {
+
+    return view('components.landingPage.order2');
+});
+Route::get('/order3', function () {
+    $details = [
+        'title' => 'Order Confirmation',
+        'body' => 'Your order has been submitted successfully!'
+    ];
+
+    Mail::to('recipient@example.com')->send(new \App\Mail\OrderNotification($details));
+    
+    return view('components.landingPage.order3');
+});
+
+Route::post('/send-notification', function () {
+    $details = [
+        'title' => 'Order Confirmation',
+        'body' => 'Your order has been submitted successfully!'
+    ];
+
+    Mail::to('recipient@example.com')->send(new \App\Mail\OrderNotification($details));
+
+    return response()->json(['message' => 'Notification sent successfully!']);
+});
+
 
 // Menambahkan file auth.php untuk rute autentikasi lainnya
 require __DIR__.'/auth.php';

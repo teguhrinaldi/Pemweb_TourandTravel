@@ -48,9 +48,9 @@
         <p class="travel-description">
             {{ $destination['additional_info'] }}
         </p>
-        <button class="travel-book-now-btn">
+        <a href="{{ url('order1') }}" class="travel-book-now-btn">
             Book now <i class="fas fa-arrow-right"></i>
-        </button>
+        </a>
     </div>
 </section> 
 

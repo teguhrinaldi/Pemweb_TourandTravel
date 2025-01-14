@@ -69,7 +69,6 @@
                 <i class="fab fa-google"></i> Sign up with Google
             </button>
         </div>
-
         @if ($errors->any())
             <p class="error">Field Cannot Be Empty</p>
         @endif
@@ -77,3 +76,5 @@
     </form>
 </div>
 </div>
+</div>
+
