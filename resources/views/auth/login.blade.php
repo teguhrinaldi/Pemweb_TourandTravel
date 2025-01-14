@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-
 <div class="mainBody">
 <div class="login-section">
     <form method="POST" action="{{ route('login') }}">
@@ -47,3 +46,5 @@
     </form>
 </div>
 </div>
+</div>
+
