@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/order3.css') }}">
+<link rel="stylesheet" href="{{ asset('css/order.css') }}">
 <section>
   <div class="invoice-container">
         <div class="invoice-header">
@@ -65,6 +66,9 @@
                 <div>
                     <h3>Additional Notes</h3>
                     <p>Have a great day</p>
+                    <a href="{{ url('/') }}">
+                        <button type="button">Home</button>
+                    </a>
                 </div>
             </div>
         </div>
