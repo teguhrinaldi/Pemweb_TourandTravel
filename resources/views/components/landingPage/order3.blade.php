@@ -67,7 +67,8 @@
                     <h3>Additional Notes</h3>
                     <p>Have a great day</p>
                     <a href="{{ url('/') }}">
-                        <button type="button">Home</button>
+                        <button class="home-button">Home</button>
+
                     </a>
                 </div>
             </div>

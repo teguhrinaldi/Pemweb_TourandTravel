@@ -129,9 +129,9 @@
 .home-button {
     display: block;
     width: 100px;
-    margin: 20px auto;
+    margin: 150px auto;
     text-align: center;
-    background-color: #ff6f61;
+    background-color: #F86B29;
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
@@ -144,5 +144,5 @@
 }
 
 .home-button:hover {
-    background-color: #e64e3d;
+    background-color: #F86B29;
 }

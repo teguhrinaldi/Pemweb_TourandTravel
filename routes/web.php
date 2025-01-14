@@ -43,6 +43,14 @@ Route::get('/', function () {
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
+         [
+            'id' => 3,
+            'imgSrc' => ['assets/thairent.jpg'],
+            'location' => 'Thainland',
+            'price' => 'Rp. 7.000.000',
+            'discount' => 30,
+            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
+        ],
     ];
 
     $blogInformation = [
