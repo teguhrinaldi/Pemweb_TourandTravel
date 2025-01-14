@@ -29,7 +29,9 @@
             </div>
         </div>
         <div class="form-button">
+            <a href="{{ url('/order2') }}">
                 <button type="button">Next</button>
+            </a>
             </div>  
     </div>
 </section>
