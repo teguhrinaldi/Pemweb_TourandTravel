@@ -42,7 +42,6 @@ Route::get('/', function () {
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
-<<<<<<< HEAD
          [
             'id' => 3,
             'imgSrc' => ['assets/thairent.jpg'],
@@ -51,8 +50,6 @@ Route::get('/', function () {
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
-=======
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
     ];
 
     $blogInformation = [
