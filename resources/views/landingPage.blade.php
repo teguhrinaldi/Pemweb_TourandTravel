@@ -19,22 +19,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Panggil Navbar -->
     <x-landingPage.navbar />
-
-    <!-- Panggil Jumbotron -->
-    <x-landingPage.jumbotron />
-
-    <!-- Panggil Content (untuk konten popular destination di masa depan) -->
-    <x-landingPage.content :popularDestination="$popularDestination" />
-
-    <!-- Tambahkan JavaScript jika diperlukan -->
-    <!-- Panggil Offers -->
-    <x-landingPage.offers :offerInformation="$offerInformation" /> 
-    
+    <x-landingPage.jumbotron />   
+    <x-landingPage.content :popularDestination="$popularDestination" />   
+    <x-landingPage.offers :offerInformation="$offerInformation" />  
     <x-landingPage.about />
-
-
     <x-landingPage.best :blogInformation="$blogInformation" />
 
    

@@ -11,6 +11,7 @@
 <section class="travel-container">
     <div class="travel-image-section">
         <img src="{{ asset($destination['image']) }}" alt="Image of {{ $destination['title'] }}">
+
     </div>
     <div class="travel-content-section">
         <h1 class="travel-title">Discover the World with</h1>
@@ -29,8 +30,3 @@
 
 </body>
 </html>
-
-
-
-
-
