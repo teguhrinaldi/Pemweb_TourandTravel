@@ -225,6 +225,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/blog/japan', function () {
+    return view('components/landingPage.blog');
+});
 
 // Menambahkan file auth.php untuk rute autentikasi lainnya
 require __DIR__.'/auth.php';
+
+Route::get('/invoice', [InvoiceController::class, 'showInvoice']);
+Route::get('/export-pdf', [InvoiceController::class, 'exportPDF']);
+

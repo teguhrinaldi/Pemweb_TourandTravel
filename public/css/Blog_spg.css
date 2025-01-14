@@ -1,146 +1,103 @@
-/* Gaya Global */
-body.main-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .main-title {
-    font-size: 2.5rem;
-    color: #49260f;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .sub-title {
-    font-size: 2.5rem;
-    color: #ff6600;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  /* Bagian Gambar */
-  .image-gallery {
-    flex: 2;
-    max-width: 30%;
-  }
-  
-  .main-image {
-    width: 10%;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .thumbnails {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 10px;
-  }
-  
-  .thumbnail {
-    width: 70px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border: 2px solid transparent;
-  }
-  
-  .thumbnail:hover {
-    transform: scale(1.1);
-    border-color: #ff6600;
-  }
-  
-  /* Bagian Detail */
-  .details {
-    flex: 1;
-    max-width: 35%;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .destination-title {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .rating {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .star-icon {
-    color: #ffcc00;
-    margin-right: 5px;
-  }
-  
-  .rating-text {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .description {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .favorite {
-    text-align: right;
-  }
-  
-  .favorite-icon {
-    font-size: 1.5rem;
-    color: #ccc;
-    cursor: pointer;
-  }
-  
-  .favorite-icon:hover {
-    color: red;
-  }
-  
-  /* Tombol Order */
-  .button-container {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .order-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #FFFFFF;
-    color: #000000;
-    text-decoration: none;
-    border-radius: 20px 0 0 0;
-    transition: background-color 0.3s ease;
-  }
-  
-  .order-button:hover {
-    background-color: #cc5200;
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .h2{
-    text-align: center;
-  }
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.image-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+
+.description {
+  flex: 1;
+  text-align: left;
+}
+
+.description h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 16px;
+  color: #ffaa00;
+  margin-bottom: 10px;
+}
+
+.places {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.place {
+  text-align: center;
+  width: 30%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.place img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.place button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.order-button {
+  background-color: orange;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
+}
