@@ -37,7 +37,7 @@
 
         <!-- Google Login Button -->
         <button type="button" class="google-btn">
-            <i class="fab fa-google"></i> Login with Google
+            <i class="fab fa-google" href="{{ route('auth.google') }}"></i> Login with Google
         </button>
 
         <!-- Error Message -->

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SocialiteController;
 use Illuminate\Support\Facades\Route;
 
 // Rute untuk halaman login dan register kustom
@@ -42,6 +43,14 @@ Route::get('/', function () {
             'discount' => 30,
             'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
         ],
+        [
+            'id' => 4,
+            'imgSrc' => ['assets/thairent.jpg'],
+            'location' => 'Thailand',
+            'price' => 'Rp. 7.000.000',
+            'discount' => 30,
+            'facilities' => ['bed' => 2, 'bath' => 1, 'wifi' => 'Wi-Fi', 'shuttle' => 'Shuttle'],
+        ]
     ];
 
     $blogInformation = [
@@ -190,7 +199,7 @@ Route::get('/specs/{location}', function ($location) {
             'img2' => ['assets/housejap2.jpg'],
             'img3' => ['assets/housejap3.jpg'],
             'img4' => ['assets/housejap4.jpg'],
-            'name' => 'Singapore Building',
+            'name' => 'Thailand Building',
             'prices' => 'Rp. 4.000.000',
             'lvroom' => 1,
             'kitchen' => 1,
@@ -215,6 +224,8 @@ Route::get('/specs/{location}', function ($location) {
         'location' => $location,
     ]);
 })->name('specs');
+
+Route::get('auth/google', [SocialiteController::class, 'googleLogin'])->name('auth.google');
 
 Route::get('/order/{location}', function ($location) {
     return view('components.landingPage.order', ['location' => $location]);
