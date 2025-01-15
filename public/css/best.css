@@ -38,8 +38,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    justify-items: center;
+<<<<<<< HEAD
+    justify-items: center; /* Pusatkan item dalam grid */
 }
+
+/* Postingan Individual
+=======
+>>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
+    justify-items: center;
+} */
 
 .blog-single-post {
     display: flex;
@@ -55,7 +62,11 @@
 }
 
 .blog-single-post:hover {
+<<<<<<< HEAD
+    transform: scale(1.03); /* Efek hover */
+=======
     transform: scale(1.03);
+>>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
 }
 
 .blog-img-div {
@@ -114,19 +125,55 @@
     margin-left: 0.5rem;
 }
 
+<<<<<<< HEAD
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .blog-main-container {
+        grid-template-columns: 1fr; /* Ubah menjadi 1 kolom pada layar kecil */
+
+
+.secIntro .secTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.secIntro p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .blog .mainContainer {
+        grid-template-columns: 1fr;
+
+=======
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr;
+>>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
     }
     .secIntro .secTitle {
         text-align: center;
         font-size: 2rem;
     }
 
+<<<<<<< HEAD
+    .blog-img-div {
+        height: 180px; /* Kurangi tinggi gambar */
+    
+
+    @media (max-width: 768px) {
+    .blog-main-container {
+        grid-template-columns: 1fr;
+=======
     .secIntro p {
         text-align: center;
         font-size: 1rem;
     }
+>>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
 
     @media screen and (max-width: 768px) {
         .blog .mainContainer {
@@ -154,5 +201,26 @@
         .blog-img-div {
             height: 180px;
         }
+<<<<<<< HEAD
+
+        @media screen and (max-width: 768px) {
+            .blog .mainContainer {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-single-post {
+                text-align: center;
+            }
+
+            .blog-img-div {
+                height: 180px;
+            }
+        }
+=======
+>>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
+    }
+}
+    }
+}
     }
 }

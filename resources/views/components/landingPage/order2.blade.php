@@ -55,8 +55,12 @@
                 <textarea placeholder="Please mention here"></textarea>
             </div>
             <div class="buttons2">
-                <button class="back2">Back</button>
-                <button class="submit2">Submit</button>
+                <a href="{{ url('/order1') }}">
+                    <button class="back2">Back</button>
+                </a>
+                <a href="{{ url('/order3') }}">
+                    <button class="submit2">Submit</button>
+                </a>
             </div>
         </div>
     </div>

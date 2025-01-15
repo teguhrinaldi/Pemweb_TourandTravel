@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-
 <div class="mainBody">
 <div class="login-section">
     <form method="POST" action="{{ route('login') }}">
@@ -36,8 +35,8 @@
         </a>
 
         <!-- Google Login Button -->
-        <button type="button" class="google-btn">
-            <i class="fab fa-google" href="{{ route('auth.google') }}"></i> Login with Google
+        <button type="button" class="google-btn" onclick="window.location.href='{{ route('redirect.google') }}'">
+            <i class="fab fa-google"></i> Login with Google
         </button>
 
         <!-- Error Message -->
@@ -47,3 +46,5 @@
     </form>
 </div>
 </div>
+</div>
+

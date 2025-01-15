@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SocialiteController;
+use App\Http\Controllers\Auth\GoogleController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 
 // Rute untuk halaman login dan register kustom
 Route::view('/custom-login', 'components.login.login')->name('custom-login');
@@ -225,7 +226,8 @@ Route::get('/specs/{location}', function ($location) {
     ]);
 })->name('specs');
 
-Route::get('auth/google', [SocialiteController::class, 'googleLogin'])->name('auth.google');
+Route::get('auth/google', [GoogleController::class, "redirectToGoogle"])->name("redirect.google");
+Route::get('auth/google/callback', [GoogleController::class, "handleGoogleCallback"]);
 
 Route::get('/order/{location}', function ($location) {
     return view('components.landingPage.order', ['location' => $location]);
@@ -240,6 +242,35 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::get('/order1', function () {
+    return view('components.landingPage.order');
+});
+Route::get('/order2', function () {
+
+    return view('components.landingPage.order2');
+});
+Route::get('/order3', function () {
+    $details = [
+        'title' => 'Order Confirmation',
+        'body' => 'Your order has been submitted successfully!'
+    ];
+
+    Mail::to('recipient@example.com')->send(new \App\Mail\OrderNotification($details));
+    
+    return view('components.landingPage.order3');
+});
+
+Route::post('/send-notification', function () {
+    $details = [
+        'title' => 'Order Confirmation',
+        'body' => 'Your order has been submitted successfully!'
+    ];
+
+    Mail::to('recipient@example.com')->send(new \App\Mail\OrderNotification($details));
+
+    return response()->json(['message' => 'Notification sent successfully!']);
 });
 
 
