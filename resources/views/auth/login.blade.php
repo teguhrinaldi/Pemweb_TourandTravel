@@ -35,7 +35,7 @@
         </a>
 
         <!-- Google Login Button -->
-        <button type="button" class="google-btn">
+        <button type="button" class="google-btn" onclick="window.location.href='{{ route('redirect.google') }}'">
             <i class="fab fa-google"></i> Login with Google
         </button>
 

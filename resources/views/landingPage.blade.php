@@ -26,7 +26,9 @@
     <x-landingPage.about />
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.footer />
-    
+    <x-landingPage.blog />
+
+
     <!-- Tambahkan JavaScript jika diperlukan -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>

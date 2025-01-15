@@ -2,25 +2,7 @@
 <html>
 <head>
     <title>Invoice</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .invoice-header, .invoice-footer {
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/pdf.css') }}">
 </head>
 <body>
     <div class="invoice-header">
@@ -63,6 +45,11 @@
         <p>Email: <a href="mailto:{{ $contact_email }}">{{ $contact_email }}</a></p>
         <p>Payment Instructions: {{ $payment_instructions }}</p>
         <p>Notes: {{ $additional_notes }}</p>
+    </div>
+
+    <!-- Tombol Download PDF -->
+    <div style="text-align: center;">
+        <a href="{{ url('/export-pdf') }}" class="btn-download">Download PDF</a>
     </div>
 </body>
 </html>
