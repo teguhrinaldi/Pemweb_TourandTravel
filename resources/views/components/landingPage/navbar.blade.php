@@ -39,6 +39,10 @@
                 <a href="#">
                     {{ Auth::user()->email }}
                 </a>
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" class="btn btn-logout">Logout</button>
+                </form>
             </h3>
             @endguest
             </div>

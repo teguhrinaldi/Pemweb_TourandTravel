@@ -176,15 +176,30 @@
 }
 
 .profile-name a {
-    color: #f86b29; /* Warna teks (ubah sesuai kebutuhan) */
-    text-decoration: none; /* Hilangkan garis bawah */
-    font-weight: bold; /* Tebalkan teks */
-    font-size: 14px; /* Ubah ukuran font sesuai kebutuhan */
-    transition: color 0.3s; /* Tambahkan transisi saat hover */
+    color: #f86b29; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 14px; 
+    transition: color 0.3s; 
 }
 
 .profile-name a:hover {
-    color: #d45a1f; /* Warna teks saat hover */
+    color: #d45a1f; 
+}
+
+.btn-logout {
+    margin-left: 10px; 
+    padding: 5px 10px; 
+    background-color: #f86b29; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #d45a1f;
 }
 
 
