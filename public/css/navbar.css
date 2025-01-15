@@ -174,3 +174,18 @@
         display: none;
     }
 }
+
+.profile-name a {
+    color: #f86b29; /* Warna teks (ubah sesuai kebutuhan) */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-weight: bold; /* Tebalkan teks */
+    font-size: 14px; /* Ubah ukuran font sesuai kebutuhan */
+    transition: color 0.3s; /* Tambahkan transisi saat hover */
+}
+
+.profile-name a:hover {
+    color: #d45a1f; /* Warna teks saat hover */
+}
+
+
+
