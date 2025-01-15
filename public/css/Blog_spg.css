@@ -1,19 +1,103 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: white;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2 {
-    margin: 0;
-    padding: 0;
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-button {
-    cursor: pointer;
-    transition: all 0.3s ease;
+.header {
+  text-align: center;
+  margin: 20px 0;
 }
 
-button:hover {
-    background-color: #e05500;
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.image-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+
+.description {
+  flex: 1;
+  text-align: left;
+}
+
+.description h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 16px;
+  color: #ffaa00;
+  margin-bottom: 10px;
+}
+
+.places {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.place {
+  text-align: center;
+  width: 30%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.place img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.place button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.order-button {
+  background-color: orange;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
 }
