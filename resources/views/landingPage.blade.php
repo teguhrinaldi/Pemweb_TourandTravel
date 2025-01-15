@@ -26,7 +26,6 @@
     <x-landingPage.about />
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.footer />
-    <x-landingPage.blog />
 
 
     <!-- Tambahkan JavaScript jika diperlukan -->

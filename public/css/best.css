@@ -6,7 +6,7 @@
     background-color: #f9f9f9;
 }
 
-/* Bagian Blog */
+/* Blog Section */
 .blog-section {
     width: 100%;
     max-width: 1200px;
@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-/* Header Blog */
+/* Section Header */
 .blog-sec-container {
     display: flex;
     flex-direction: column;
@@ -34,14 +34,19 @@
     margin-bottom: 2rem;
 }
 
+/* Blog Main Grid */
 .blog-main-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     gap: 2rem;
     justify-items: center;
 }
 
+<<<<<<< HEAD
+/* Single Blog Post */
+=======
 /* Postingan Individual */
+>>>>>>> 074b011dd6124d6aa49d764e6e4ec703894ac1d0
 .blog-single-post {
     display: flex;
     flex-direction: column;
@@ -78,6 +83,7 @@
     transform: scale(1.05);
 }
 
+/* Blog Details */
 .blog-post-details {
     margin-top: 1rem;
     text-align: center;
@@ -95,6 +101,7 @@
     line-height: 1.5;
 }
 
+/* Read More Button */
 .blog-read-more {
     margin-top: 1rem;
     color: hsl(26, 93%, 50%);
@@ -115,7 +122,18 @@
     margin-left: 0.5rem;
 }
 
+<<<<<<< HEAD
+/* Responsiveness */
+@media (max-width: 768px) {
+    .blog-main-container {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-img-div {
+        height: 180px;
+=======
 /* Responsivitas */
+>>>>>>> 074b011dd6124d6aa49d764e6e4ec703894ac1d0
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr;
@@ -133,9 +151,43 @@
         text-align: center;
         font-size: 2rem;
     }
+}
 
     .secIntro p {
         text-align: center;
         font-size: 1rem;
     }
+<<<<<<< HEAD
+
+    @media screen and (max-width: 768px) {
+        .blog .mainContainer {
+            grid-template-columns: 1fr;
+        }
+
+        .blog-single-post {
+            text-align: center;
+        }
+
+        .blog-img-div {
+            height: 180px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .blog .mainContainer {
+            grid-template-columns: 1fr;
+        }
+
+        .blog-single-post {
+            text-align: center;
+        }
+
+        .blog-img-div {
+            height: 180px;
+        }
+    }
 }
+}
+=======
+}
+>>>>>>> 074b011dd6124d6aa49d764e6e4ec703894ac1d0
