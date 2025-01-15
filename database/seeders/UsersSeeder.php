@@ -20,16 +20,34 @@ class UsersSeeder extends Seeder
 
         // Menambahkan data user
         User::firstOrCreate([
-            'email' => 'john@example.com',
+            'email' => 'teguh@gmail.com',
         ], [
-            'name' => 'John Doe',
+            'name' => 'teguh',
             'password' => bcrypt('password123'),
         ]);
 
         User::firstOrCreate([
-            'email' => 'jane@example.com',
+            'email' => 'indra@gmail.com',
         ], [
-            'name' => 'Jane Doe',
+            'name' => 'indra',
+            'password' => bcrypt('password123'),
+        ]);
+        User::firstOrCreate([
+            'email' => 'sal@gmail.com',
+        ], [
+            'name' => 'sal',
+            'password' => bcrypt('password123'),
+        ]);
+        User::firstOrCreate([
+            'email' => 'muel@gmail.com',
+        ], [
+            'name' => 'imuel',
+            'password' => bcrypt('password123'),
+        ]);
+        User::firstOrCreate([
+            'email' => 'raziq@gmail.com',
+        ], [
+            'name' => 'raziq',
             'password' => bcrypt('password123'),
         ]);
 
