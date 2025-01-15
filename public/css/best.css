@@ -6,7 +6,7 @@
     background-color: #f9f9f9;
 }
 
-/* Blog Section */
+/* Bagian Blog */
 .blog-section {
     width: 100%;
     max-width: 1200px;
@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-/* Section Header */
+/* Header Blog */
 .blog-sec-container {
     display: flex;
     flex-direction: column;
@@ -34,15 +34,14 @@
     margin-bottom: 2rem;
 }
 
-/* Blog Main Grid */
 .blog-main-container {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     justify-items: center;
 }
 
-/* Single Blog Post */
+/* Postingan Individual */
 .blog-single-post {
     display: flex;
     flex-direction: column;
@@ -79,7 +78,6 @@
     transform: scale(1.05);
 }
 
-/* Blog Details */
 .blog-post-details {
     margin-top: 1rem;
     text-align: center;
@@ -97,7 +95,6 @@
     line-height: 1.5;
 }
 
-/* Read More Button */
 .blog-read-more {
     margin-top: 1rem;
     color: hsl(26, 93%, 50%);
@@ -118,55 +115,27 @@
     margin-left: 0.5rem;
 }
 
-/* Responsiveness */
+/* Responsivitas */
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr;
     }
 
+    .blog-single-post {
+        text-align: center;
+    }
+
     .blog-img-div {
         height: 180px;
-@media (max-width: 768px) {
-    .blog-main-container {
-        grid-template-columns: 1fr;
     }
+
     .secIntro .secTitle {
         text-align: center;
         font-size: 2rem;
     }
-}
 
     .secIntro p {
         text-align: center;
         font-size: 1rem;
     }
-
-    @media screen and (max-width: 768px) {
-        .blog .mainContainer {
-            grid-template-columns: 1fr;
-        }
-
-        .blog-single-post {
-            text-align: center;
-        }
-
-        .blog-img-div {
-            height: 180px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .blog .mainContainer {
-            grid-template-columns: 1fr;
-        }
-
-        .blog-single-post {
-            text-align: center;
-        }
-
-        .blog-img-div {
-            height: 180px;
-        }
-    }
-}
 }
