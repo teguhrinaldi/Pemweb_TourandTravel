@@ -26,11 +26,8 @@
     <x-landingPage.about />
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.footer />
-<<<<<<< HEAD
     
-=======
     <!-- Tambahkan JavaScript jika diperlukan -->
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({

@@ -41,23 +41,23 @@
                 <img src="{{ asset('assets/Langkawi/langkawi1.jpg') }}" alt="Langkawi">
                 <h4>Langkawi</h4>
                 <p>📍 Malaysia</p>
-                <button>Book Now</button>
+                <a href="/order1"><button>Book Now</button></a>
             </div>
             <div class="place">
                 <img src="{{ asset('assets/jabo/jabo1.jpg') }}" alt="Jabo Village">
                 <h4>Jabo Village</h4>
                 <p>📍 Thailand</p>
-                <button>Book Now</button>
+                <a href="/order1"><button>Book Now</button></a>
             </div>
             <div class="place">
                 <img src="{{ asset('assets/Fuji/fuji1.jpg') }}" alt="Mountain Fuji">
                 <h4>Mountain Fuji</h4>
                 <p>📍 Japan</p>
-                <button>Book Now</button>
+                <a href="/order1"><button>Book Now</button></a>
             </div>
         </div>
 
-        <button class="order-button">Order</button>
+        <a href="/order1"><button class="order-button">Order</button></a>
     </div>
 </body>
 </html>

@@ -25,7 +25,7 @@
                         </div>
                         <!-- Read More Button -->
                         <div class="blog-read-more" onclick="location.href='{{ url('blog/' . $post['location']) }}'">
-                            <span>Read More</span>
+                        <a href="{{ url('blog/' . $post['id']) }}">Read More</a>
                             <i class="icon"></i>
                         </div>
                     </div>

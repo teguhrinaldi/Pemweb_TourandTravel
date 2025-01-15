@@ -34,28 +34,15 @@
     margin-bottom: 2rem;
 }
 
-<<<<<<< HEAD
 /* Blog Main Grid */
-=======
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
 .blog-main-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     gap: 2rem;
-<<<<<<< HEAD
-    justify-items: center; /* Pusatkan item dalam grid */
+    justify-items: center;
 }
 
-<<<<<<< HEAD
 /* Single Blog Post */
-=======
-/* Postingan Individual
-=======
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
-    justify-items: center;
-} */
-
->>>>>>> c70ede84e16f9599f9a958520277f18bff7dd9fd
 .blog-single-post {
     display: flex;
     flex-direction: column;
@@ -70,11 +57,7 @@
 }
 
 .blog-single-post:hover {
-<<<<<<< HEAD
-    transform: scale(1.03); /* Efek hover */
-=======
     transform: scale(1.03);
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
 }
 
 .blog-img-div {
@@ -96,10 +79,7 @@
     transform: scale(1.05);
 }
 
-<<<<<<< HEAD
 /* Blog Details */
-=======
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
 .blog-post-details {
     margin-top: 1rem;
     text-align: center;
@@ -117,10 +97,7 @@
     line-height: 1.5;
 }
 
-<<<<<<< HEAD
 /* Read More Button */
-=======
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
 .blog-read-more {
     margin-top: 1rem;
     color: hsl(26, 93%, 50%);
@@ -141,71 +118,28 @@
     margin-left: 0.5rem;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Responsiveness */
-=======
-
-/* Responsivitas */
-@media (max-width: 768px) {
-    .blog-main-container {
-        grid-template-columns: 1fr; /* Ubah menjadi 1 kolom pada layar kecil */
-
-
-.secIntro .secTitle {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.secIntro p {
-    text-align: center;
-    font-size: 1rem;
-}
-
-
-/* Responsif untuk layar kecil */
-@media screen and (max-width: 768px) {
-    .blog .mainContainer {
-        grid-template-columns: 1fr;
-
-=======
->>>>>>> c70ede84e16f9599f9a958520277f18bff7dd9fd
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr;
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
     }
 
     .blog-img-div {
         height: 180px;
-=======
 @media (max-width: 768px) {
     .blog-main-container {
         grid-template-columns: 1fr;
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
     }
     .secIntro .secTitle {
         text-align: center;
         font-size: 2rem;
     }
-<<<<<<< HEAD
 }
-=======
 
-<<<<<<< HEAD
-    .blog-img-div {
-        height: 180px; /* Kurangi tinggi gambar */
-    
-
-    @media (max-width: 768px) {
-    .blog-main-container {
-        grid-template-columns: 1fr;
-=======
     .secIntro p {
         text-align: center;
         font-size: 1rem;
     }
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
 
     @media screen and (max-width: 768px) {
         .blog .mainContainer {
@@ -233,30 +167,6 @@
         .blog-img-div {
             height: 180px;
         }
-<<<<<<< HEAD
-
-        @media screen and (max-width: 768px) {
-            .blog .mainContainer {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-single-post {
-                text-align: center;
-            }
-
-            .blog-img-div {
-                height: 180px;
-            }
-        }
-=======
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
     }
 }
-<<<<<<< HEAD
->>>>>>> 243e1b82351156c891ee970847f734fd3a11d947
-=======
-    }
 }
-    }
-}
->>>>>>> c70ede84e16f9599f9a958520277f18bff7dd9fd
