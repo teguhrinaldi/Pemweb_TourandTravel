@@ -146,3 +146,26 @@
 .home-button:hover {
     background-color: #e64e3d;
 }
+
+.button-container {
+    margin-top: 3.25rem;
+    display: flex;               /* Enable Flexbox for the container */
+    justify-content: center;     /* Center the button horizontally */
+    position: relative;          /* Position it at the bottom */
+    bottom: 20px;                /* Adjust distance from the bottom of the container */
+    width: 100%;                 /* Ensure the container spans the full width */
+}
+
+.button-download {
+    padding: 10px 20px;          /* Add padding to the button for better clickability */
+    background-color: #007bff;   /* Example background color */
+    color: white;                /* White text color */
+    border: none;                /* Remove border */
+    border-radius: 5px;          /* Optional rounded corners */
+    cursor: pointer;            /* Show pointer cursor on hover */
+    font-size: 16px;             /* Button font size */
+}
+
+.button-download:hover {
+    background-color: #0056b3;   /* Darker shade on hover */
+}

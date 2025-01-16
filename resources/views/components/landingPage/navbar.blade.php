@@ -49,17 +49,3 @@
         </div>
     </div>
 </section>
-<script>
-    function toggleNav() {
-        const navBar = document.getElementById('navBar');
-        const hamburgerIcon = document.getElementById('hamburgerIcon');
-        navBar.classList.toggle('active');
-
-        // Ganti ikon hamburger menjadi ikon close
-        if (navBar.classList.contains('active')) {
-            hamburgerIcon.classList.replace('fa-bars', 'fa-times');
-        } else {
-            hamburgerIcon.classList.replace('fa-times', 'fa-bars');
-        }
-    }
-</script>

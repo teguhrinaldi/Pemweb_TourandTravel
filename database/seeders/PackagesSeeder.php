@@ -29,7 +29,24 @@ class PackagesSeeder extends Seeder
             'price' => 2000,
             'description' => 'Description for Tour C',
         ]);
-
-        // Add more packages if needed
+        Package::firstOrCreate([
+            'name' => 'Tour D',
+        ], [
+            'price' => 3500,
+            'description' => 'Description for Tour D',
+        ]);
+        Package::firstOrCreate([
+            'name' => 'Tour E',
+        ], [
+            'price' => 55000,
+            'description' => 'Description for Tour E',
+        ]);
+        Package::firstOrCreate([
+            'name' => 'Tour F',
+        ], [
+            'price' => 12500,
+            'description' => 'Description for Tour F',
+        ]);
+        
     }
 }
