@@ -26,6 +26,10 @@
     <x-landingPage.about />
     <x-landingPage.best :blogInformation="$blogInformation" />
     <x-landingPage.footer />
+<<<<<<< HEAD
+    <x-landingPage.blog />
+=======
+>>>>>>> 8fc43c8219325e75061c83d609b8f7f58cd2e900
 
 
     <!-- Tambahkan JavaScript jika diperlukan -->

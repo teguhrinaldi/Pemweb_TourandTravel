@@ -31,18 +31,20 @@
             </ul>
             <!-- Authentication Buttons -->
             <div class="headerBtns">
-                @if (session('login'))
-                    <button class="btn">{{ session('username') }}</button>
-                    <button class="btn" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Logout
-                    </button>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                @else
-                    <button onclick="window.location.href='{{ route('login') }}'" class="btn LoginBtn">Login</button>
-                    <button onclick="window.location.href='{{ route('register') }}'" class="btn">Sign Up</button>
-                @endif
+            @guest
+            <button onclick="window.location.href='{{ route('login') }}'" class="btn LoginBtn">Login</button>
+            <button onclick="window.location.href='{{ route('register') }}'" class="btn">Sign Up</button>
+            @else
+            <h3 class="profile-name">
+                <a href="#">
+                    {{ Auth::user()->email }}
+                </a>
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" class="btn btn-logout">Logout</button>
+                </form>
+            </h3>
+            @endguest
             </div>
         </div>
     </div>
